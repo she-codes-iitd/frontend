@@ -2,7 +2,7 @@
 	--yellow: #FFDE73;
 	--blue: #16324F;
 	--secondary: #2F4760;
-
+	--light_blue: #F3FFFF;
 }
 
 a{
@@ -120,6 +120,66 @@ label:focus,
 		padding: 4px 30px;
 		border-radius: 12px;
 	}
+}
+
+#join{
+	background: url('/imgs/join.png') no-repeat center center/cover;
+	padding: 3rem;
+	padding-bottom: 3.5rem;
+	#join_student{
+		padding: 3rem;
+		border: #fff solid 2px;
+		border-radius: 33px;
+	}
+	#join_teacher{
+		padding: 3rem;
+		border: #fff solid 2px;
+		border-radius: 33px;
+	}
+	h2{
+		font-family: 'Gilroy';
+		font-weight: bolder;
+		color: var(--yellow);
+		margin-bottom: 4rem;
+	}
+	h3{
+		font-family: 'Gilroy';
+		font-weight: bolder;
+		color: var(--yellow);
+		font-size: 2rem;
+	}
+	h5{
+		font-family: 'Gilroy';
+		font-weight: bolder;
+		color: var(--yellow);
+	}
+	p{
+		// text-align: justify;
+		font-family: 'Nunito Sans', sans-serif;
+		font-style: normal;
+		font-weight: normal;
+		margin: 3rem 0;
+	}
+	.sign_in_button{
+		display: block;
+		font-family: 'Nunito Sans', sans-serif;
+		font-style: normal;
+		font-weight: normal;
+		background-color: var(--yellow);
+		padding: 5px 20px;
+		border: var(--yellow) solid 2px;
+		border-radius: 12.5px;
+		color: var(--blue);
+		transition: all 0.3s ease-in;
+		&:hover{
+			color: var(--yellow);
+			background-color: var(--blue);
+		}
+	}
+}
+
+#gallery{
+	
 }
 
 footer{
