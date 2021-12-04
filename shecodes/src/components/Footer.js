@@ -30,7 +30,7 @@ const Footer = () => {
 				</div>
 
 				<div className="mt-5 mx-auto text-center pb-3" id="copyright">
-					All rights reserved. NSS IIT Delhi. <span id="year"></span>
+					All rights reserved. NSS IIT Delhi. <span id="year">{new Date().getFullYear()}</span>
 				</div>
 			</div>
 		</footer>

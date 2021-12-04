@@ -2,11 +2,37 @@ import logo from '../src/imgs/logo.png';
 import front_bg from '../src/imgs/front_bg.jpg'
 import './App.css';
 import Footer from './components/Footer';
-import Script from './components/scripts';
+import Join from './components/Join';
+import Initiative from './components/Initiative';
+import About from './components/About';
+import Form from './components/Form';
+import React, { useState } from 'react';
 
 function App() {
+
+	const [hamburger, setHamburger] = useState(false)
+	const [navMenu, setNav] = useState(false)
+
+	const closeHamburger = () => {
+		if (hamburger === true) {
+			setHamburger(false);
+		}
+		if (navMenu === true) {
+			setNav(false);
+		}
+	}
+
+	const openHamburger = () => {
+		if (hamburger === false) {
+			setHamburger(true);
+		}
+		if (navMenu === false) {
+			setNav(true);
+		}
+	}
+
 	return (
-		<div className="App">
+		<div className="App" onClick={closeHamburger}>
 			<div id="contain">
 				<img src={front_bg} id="bg" className="img-fluid" alt="" />
 				<div id="header">
@@ -50,12 +76,12 @@ function App() {
 							<div>
 								<a href="index.html" className="my-navbar-logo"><img src={logo} alt="" /></a>
 							</div>
-							<div id="toggler">
+							<div id="toggler" className={hamburger ? 'show' : ''} onClick={openHamburger}>
 								<span className="bar"></span>
 								<span className="bar"></span>
 								<span className="bar"></span>
 							</div>
-							<ul className="my-nav-menu ps-0 me-auto">
+							<ul className={navMenu ? 'my-nav-menu ps-0 me-auto show' : 'my-nav-menu ps-0 me-auto'}>
 								<li className="my-nav-item active">
 									<a href="#about" className="my-nav-link">About</a>
 								</li>
@@ -73,53 +99,19 @@ function App() {
 					</div>
 					<div className="container" id="para_learn">
 						<h1 id="learn" className="text-white">
-							<span className="yellow-text">Learn </span>on your <br /> className <span className="yellow-text">schedule</span>
+							<span className="yellow-text">Learn </span>on your <br /> class <span className="yellow-text">schedule</span>
 						</h1>
 						<p className="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque quaerat eius voluptate
 							officiis tempora corporis?</p>
 					</div>
 				</div>
 
-				<div id="about" className="text-center d-flex flex-column align-items-center">
-					<div id="about_text" className="my-auto">
-						<h1>Learn on your<br />className schedule</h1>
-						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br /> Facere, ad minus quisquam dolore officia
-							expedita.</p>
-						<a href="#" className="btn">Join Now</a>
-					</div>
-				</div>
-				<div id="initiative">
-
-				</div>
-				<div id="join" className="text-center">
-					<div className="container">
-
-						<h2>Welcome to SheCodes</h2>
-						<div className="container">
-							<div className="row">
-								<div className="col-md-1"></div>
-								<div id="join_student" className="col-md-4">
-									<h5 className="text-white">Join as</h5>
-									<h3>Student</h3>
-									<p className="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi debitis quisquam
-										consequatur porro hic
-										dicta.</p>
-									<a href="#" className="sign_in_button">Sign in</a>
-								</div>
-								<div className="col-md-2"></div>
-								<div id="join_teacher" className="col-md-4">
-									<h5 className="text-white">Join as</h5>
-									<h3>Teacher</h3>
-									<p className="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi debitis quisquam
-										consequatur porro hic dicta.</p>
-									<a href="#" className="sign_in_button">Sign in</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				<About />
+				<Initiative />
+				<Join />
 			</div>
 			<Footer />
+			<Form />
 		</div>
 	);
 }
