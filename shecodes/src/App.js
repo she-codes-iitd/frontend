@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import Join from './components/Join';
 import Initiative from './components/Initiative';
 import About from './components/About';
-import Form from './components/Form';
+import ScrollButton from './components/ScrollButton';
 import React, { useState } from 'react';
 
 function App() {
@@ -55,13 +55,15 @@ function App() {
 									<div className="line mx-auto"></div>
 								</div>
 								<div className="d-flex justify-content-center">
-									<a href="#" className="p-2 pb-1">Contact</a>
+									<a href="#contact" className="p-2 pb-1">Contact</a>
 									<div className="line mx-auto"></div>
 								</div>
 							</div>
 							<div className="col-md-2 ms-auto">
 								<div className="d-flex justify-content-center align-items-center">
-									<div id="button" className="px-4 btn" href="#">Sign in</div>
+									<a href="#join">
+										<div id="button" className="px-4 btn">Sign in</div>
+									</a>
 								</div>
 							</div>
 						</div>
@@ -92,7 +94,7 @@ function App() {
 									<a href="#gallery" className="my-nav-link">Gallery</a>
 								</li>
 								<li className="my-nav-item">
-									<a href="#" className="my-nav-link">Contact</a>
+									<a href="#contact" className="my-nav-link">Contact</a>
 								</li>
 							</ul>
 						</div>
@@ -105,13 +107,12 @@ function App() {
 							officiis tempora corporis?</p>
 					</div>
 				</div>
-
+				<ScrollButton />
 				<About />
 				<Initiative />
 				<Join />
 			</div>
 			<Footer />
-			<Form />
 		</div>
 	);
 }

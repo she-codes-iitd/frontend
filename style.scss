@@ -1,5 +1,6 @@
 :root{
 	--yellow: #FFDE73;
+	--dark_yellow: #fdd85c;
 	--blue: #16324F;
 	--secondary: #2F4760;
 	--light_blue: #F3FFFF;
@@ -182,6 +183,83 @@ label:focus,
 	
 }
 
+.modal-body{
+	border: none !important;
+	border-radius: 52px !important;
+}
+.modal-content{
+	border: none !important;
+	border-radius: 52px !important;
+}
+
+.card_forms{
+	max-width: 990px !important;
+	background: url('/imgs/form.png');
+	background-position: center;
+	background-size: cover;
+	border-radius: 52px !important;
+	.card{
+		border: none;
+		background: none;
+		h2{
+			font-size: 3rem;
+			color: var(--blue);
+			font-family: 'Gilroy';
+			font-weight: bolder;
+		}
+	}
+}
+
+.signinforms{
+	margin: auto;
+	max-width: 550px;
+	background: none;
+	font-family: 'Nunito Sans', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	input{
+		background: none;
+		border-width: 0 0 1.5px 0 !important;
+		border-radius: 0 !important;
+		border-bottom-color: var(--secondary) !important;
+		
+		&:focus{
+			background: none;
+			border-color: var(--blue) !important;
+		}
+		&:active{
+			background: none;
+			border-color: var(--blue) !important;
+		}
+	}
+
+	a{
+		color: var(--blue);
+		text-decoration: underline var(--blue) solid;
+	}
+
+	button{
+		display: block;
+		background-color: var(--yellow) !important;
+		padding: 5px 50px;
+		border: var(--yellow) solid 2px;
+		border-radius: 12.5px;
+		transition: all 0.3s ease-in;
+
+		&:hover{
+			background-color: var(--dark_yellow) !important;
+		}
+	}
+}
+
+body.modal-open > :not(.modal) {
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+}
+
 footer{
 	background-color: #393D3F;
 	padding-top: 2rem;
@@ -227,6 +305,9 @@ footer{
 
 	#copyright{
 		color: #A0A0A0;
+		a{
+			color: #A0A0A0;
+		}
 	}
 }
 

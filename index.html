@@ -7,6 +7,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
 		integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +23,7 @@
 </head>
 
 <body>
-	<div id="contain">
+	<div id="contain" class="bg">
 		<img src="/imgs/front_bg.jpg" id="bg" class="img-fluid" alt="">
 		<div id="header">
 			<div id="navbar" class="container">
@@ -49,7 +52,9 @@
 					</div>
 					<div class="col-md-2 ms-auto">
 						<div class="d-flex justify-content-center align-items-center">
-							<div id="button" class="px-4 btn" href="#">Sign in</div>
+							<a href="#join">
+								<div id="button" class="px-4 btn">Sign in</div>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -99,7 +104,7 @@
 				<h1>Learn on your<br>class schedule</h1>
 				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br> Facere, ad minus quisquam dolore officia
 					expedita.</p>
-				<a href="#" class="btn">Join Now</a>
+				<a href="#join" class="btn">Join Now</a>
 			</div>
 		</div>
 		<div id="initiative">
@@ -118,7 +123,7 @@
 							<p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi debitis quisquam
 								consequatur porro hic
 								dicta.</p>
-							<a href="#" class="sign_in_button">Sign in</a>
+							<a href="#" data-bs-toggle="modal" data-bs-target="#signIn" class="sign_in_button">Sign in</a>
 						</div>
 						<div class="col-md-2"></div>
 						<div id="join_teacher" class="col-md-4">
@@ -126,7 +131,7 @@
 							<h3>Teacher</h3>
 							<p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi debitis quisquam
 								consequatur porro hic dicta.</p>
-							<a href="#" class="sign_in_button">Sign in</a>
+							<a href="#" class="sign_in_button" data-bs-toggle="modal" data-bs-target="#signIn">Sign in</a>
 						</div>
 					</div>
 				</div>
@@ -134,21 +139,34 @@
 		</div>
 	</div>
 
-	<div class="card">
-
-	</div>
-
-	<div class="container">
-		<form action="#">
-			<div class="form-group">
-				<input type="text" placeholder="Username" class="form-control my-2">
+	<!-- <div class="p-3">
+		<div class="container card_forms">
+			<div class="card my-3">
+				<h2 class="mt-5 mb-4 text-center">Sign in as a Student</h2>
+				<div class="container">
+					<form action="#" class="signinforms">
+						<div class="form-group">
+							<input type="text" placeholder="Username" class="form-control my-3">
+						</div>
+						<div class="form-group">
+							<input type="password" placeholder="Password" class="form-control my-3">
+						</div>
+						<div class="text-end">
+							<small><a href="#">Forgot Password?</a></small>
+						</div>
+						<button action="#" class="mx-auto my-5">Sign in</button>
+						<div class="text-center my-3">
+							<a href="#">First Time? Sign Up Here</a>
+						</div>
+						<div class="text-center mt-3 mb-5">
+							<a href="#">Sign in as a Volunteer, instead?</a>
+						</div>
+					</form>
+				</div>
 			</div>
-			<div class="form-group">
-				<input type="password" placeholder="Password" class="form-control my-2">
-			</div>
-			<button></button>
-		</form>
-	</div>
+
+		</div>
+	</div> -->
 
 	<footer>
 		<div class="container">
@@ -178,10 +196,48 @@
 			</div>
 
 			<div class="mt-5 mx-auto text-center pb-3" id="copyright">
+				<a href="mailto:abcd@gmail.com" id="email">abcd@gmail.com</a> <br />
 				All rights reserved. NSS IIT Delhi. <span id="year"></span>
 			</div>
 		</div>
 	</footer>
+
+	<!-- Modal -->
+	<div class="modal fade" id="signIn" tabindex="-1" aria-labelledby="signInLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-lg">
+			<div class="modal-content">
+				<div class="modal-body">
+
+					<div class="container card_forms">
+						<div class="card my-3">
+							<h2 class="my-4 text-center">Sign in as a Student</h2>
+							<div class="container">
+								<form action="#" class="signinforms">
+									<div class="form-group">
+										<input type="text" placeholder="Username" class="form-control my-3">
+									</div>
+									<div class="form-group">
+										<input type="password" placeholder="Password" class="form-control my-3">
+									</div>
+									<div class="text-end">
+										<small><a href="#">Forgot Password?</a></small>
+									</div>
+									<button action="#" class="mx-auto my-5">Sign in</button>
+									<div class="text-center my-3">
+										<a href="#">First Time? Sign Up Here</a>
+									</div>
+									<div class="text-center my-3">
+										<a href="#">Sign in as a Volunteer, instead?</a>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<script>
 		$('#year').text(new Date().getFullYear());

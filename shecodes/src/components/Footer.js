@@ -30,6 +30,7 @@ const Footer = () => {
 				</div>
 
 				<div className="mt-5 mx-auto text-center pb-3" id="copyright">
+					<a href="mailto:abcd@gmail.com" id = "contact">abcd@gmail.com</a> <br />
 					All rights reserved. NSS IIT Delhi. <span id="year">{new Date().getFullYear()}</span>
 				</div>
 			</div>
