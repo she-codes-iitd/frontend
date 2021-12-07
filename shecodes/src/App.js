@@ -4,8 +4,11 @@ import logo from '../src/imgs/logo.png'
 import Footer from './components/Footer';
 import React, { useState } from 'react';
 import Header from './components/Header'
-import LoggedInToggle from './components/LoggedInToggle';
-import teardrop from '../src/imgs/teardrop.png'
+import ScrollButton from './components/ScrollButton';
+import About from './components/About';
+import Initiative from './components/Initiative';
+import Join from './components/Join';
+import Gallery from './components/Gallery';
 
 function App() {
 	const [hamburger, setHamburger] = useState(false)
@@ -20,15 +23,18 @@ function App() {
 		}
 	}
 
-	const [isLoggedIn, setLoggedIn] = useState(false);
-
 	return (
 
 		<div className="App" onClick={closeHamburger}>
 			<div id="contain">
 				<img src={front_bg} id="bg" className="img-fluid" alt="" />
-				<Header isLoggedIn={isLoggedIn} logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />
-				<LoggedInToggle isLoggedIn={isLoggedIn} />
+				<Header logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />
+				<ScrollButton />
+				<About />
+				<Initiative />
+				<Join />
+				<Gallery />
+
 			</div>
 			<Footer />
 
