@@ -5,23 +5,23 @@ const Footer = () => {
 		<footer>
 			<div className="container">
 				<div className="row d-flex justify-content-between">
-					<div className="col-md-3">
-						<img src={logo} href="#" style={{ cursor: "pointer" }} height="35px" alt="SheCodes" />
-						<h4 className="ms-3">An initiative by NSS IIT Delhi</h4>
+					<div className="col-md-3 mb-3 d-flex flex-column align-items-center">
+						<img src={logo} href="#" style={{ cursor: "pointer" }} height="35px" width="193.73px" alt="SheCodes" />
+						<h4>An initiative by NSS IIT Delhi</h4>
 					</div>
-					<div className="col-md-3">
+					<div className="col-md-3 d-flex justify-content-center">
 						<div className="row">
-							<div className="col-md-3">
+							<div className="col-3 d-flex justify-content-center">
 								<a href="https://www.linkedin.com" rel="noreferrer" target="_blank" className="element"><i className="fab fa-linkedin-in"></i></a>
 							</div>
-							<div className="col-md-3">
+							<div className="col-3 d-flex justify-content-center">
 								<a href="https://www.fackebook.com" rel="noreferrer" target="_blank" className="fb-element"><i
 									className="fab fa-facebook-f"></i></a>
 							</div>
-							<div className="col-md-3">
+							<div className="col-3 d-flex justify-content-center">
 								<a href="https://www.twitter.com" rel="noreferrer" target="_blank" className="element"><i className="fab fa-twitter"></i></a>
 							</div>
-							<div className="col-md-3">
+							<div className="col-3 d-flex justify-content-center">
 								<a href="https://www.instagram.com" rel="noreferrer" target="_blank" className="element"><i className="fab fa-instagram"></i></a>
 							</div>
 						</div>

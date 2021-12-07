@@ -575,6 +575,9 @@ footer #copyright a {
             transform: translateY(-8px) rotate(-45deg);
   }
 
+}
+
+@media (max-width: 767x) {
 	#pc_gallery{
 		display: none;
 	}
@@ -585,7 +588,7 @@ footer #copyright a {
 /*# sourceMappingURL=style.css.map */
 
 /* adding new css */
-
+/* 
 .alltopics{
   margin: 20px;
   background-color: #F3FFFF;
@@ -751,7 +754,7 @@ a {
   font-weight: normal;
 }
 
-/* MEDIA QUERIES */
+// MEDIA QUERIES
 @media screen and (max-width: 1285px) {
   .cards-wrapper {
     grid-template-columns: 1fr 1fr;
@@ -995,4 +998,4 @@ h4{
     background: linear-gradient(to top, #e5e6e6 50%, transparent 100%);
     display: inline-grid;
   }
-}
+} */

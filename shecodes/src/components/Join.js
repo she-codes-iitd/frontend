@@ -7,8 +7,7 @@ const Join = () => {
 
 				<h2>Welcome to SheCodes</h2>
 				<div class="container">
-					<div class="row">
-						<div class="col-md-1"></div>
+					<div class="row d-flex justify-content-around">
 						<div id="join_student" class="col-md-4 mb-3">
 							<h5 class="text-white">Join as</h5>
 							<h3>Student</h3>
@@ -17,7 +16,6 @@ const Join = () => {
 								dicta.</p>
 							<a href="#" data-bs-toggle="modal" data-bs-target="#signInStudent" class="sign_in_button">Sign in</a>
 						</div>
-						<div class="col-md-2"></div>
 						<div id="join_teacher" class="col-md-4 mb-3">
 							<h5 class="text-white">Join as</h5>
 							<h3>Teacher</h3>
