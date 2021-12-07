@@ -1,5 +1,6 @@
 import front_bg from '../src/imgs/front_bg.jpg'
 import './App.css';
+import logo from '../src/imgs/logo.png'
 import Footer from './components/Footer';
 import React, { useState } from 'react';
 import Header from './components/Header'
@@ -26,7 +27,7 @@ function App() {
 		<div className="App" onClick={closeHamburger}>
 			<div id="contain">
 				<img src={front_bg} id="bg" className="img-fluid" alt="" />
-				<Header isLoggedIn={isLoggedIn} logo={teardrop} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav}/>
+				<Header isLoggedIn={isLoggedIn} logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />
 				<LoggedInToggle isLoggedIn={isLoggedIn} />
 			</div>
 			<Footer />

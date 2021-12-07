@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import App from './App';
 import Form from './Form';
+import SignUpForm from './SignUpForm';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
@@ -14,9 +15,9 @@ ReactDOM.render(
 
 ReactDOM.render(
 	<React.StrictMode>
-		<Form name="Student" notname="Volunteer" signIn="true" />
-		<Form name="Volunteer" notname="Student" signIn="true" />
-		<Form name="Student" notname="Volunteer" signIn="false" />
+		<Form name="Student" notname="Volunteer" />
+		<Form name="Volunteer" notname="Student" />
+		<SignUpForm name="Student" notname="Volunteer" />
 	</React.StrictMode>,
 	document.getElementById('modalRoot')
 );
