@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import App from './App';
-import Form from './Form';
+import SignInForm from './SignInForm';
 import SignUpForm from './SignUpForm';
 import reportWebVitals from './reportWebVitals';
 
@@ -15,8 +15,8 @@ ReactDOM.render(
 
 ReactDOM.render(
 	<React.StrictMode>
-		<Form name="Student" notname="Volunteer" />
-		<Form name="Volunteer" notname="Student" />
+		<SignInForm name="Student" notname="Volunteer" />
+		<SignInForm name="Volunteer" notname="Student" />
 		<SignUpForm name="Student" notname="Volunteer" />
 	</React.StrictMode>,
 	document.getElementById('modalRoot')
