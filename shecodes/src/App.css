@@ -579,9 +579,9 @@ footer #copyright a {
 .card1 {
   position: absolute;
   width: 370px;
-  height: 325px;
+  height: 225px;
   margin-left: 48px;
-  margin-top: 597px;
+  margin-top: -200px;
   border: solid black;
   border-radius: 13px;
 }
@@ -589,9 +589,9 @@ footer #copyright a {
 .card2 {
   position: absolute;
   width: 370px;
-  height: 325px;
+  height: 225px;
   margin-left: 495px;
-  margin-top: 597px;
+  margin-top: -200px;
   border: solid black;
   border-radius: 13px;
 }
@@ -599,9 +599,9 @@ footer #copyright a {
 .card3 {
   position: absolute;
   width: 370px;
-  height: 325px;
+  height: 225px;
   margin-left: 941px;
-  margin-top: 597px;
+  margin-top: -200px;
   border: solid black;
   border-radius: 13px;
 }

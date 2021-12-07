@@ -5,7 +5,7 @@ import NavBarLoggedIn from './NavBarLoggedIn';
 function Header2(props) {
 
 	return (
-		<div id="header" style={{position: 'absolute'}}>
+		<div id="header">
 			
 			<NavBarLoggedIn logo={props.logo} hamburger={props.hamburger} navMenu={props.navMenu} setHamburger={props.setHamburger} setNav={props.setNav} />
 
