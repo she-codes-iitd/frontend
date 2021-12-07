@@ -574,16 +574,6 @@ footer #copyright a {
     -webkit-transform: translateY(-8px) rotate(-45deg);
             transform: translateY(-8px) rotate(-45deg);
   }
-
-}
-
-@media (max-width: 767x) {
-	#pc_gallery{
-		display: none;
-	}
-	#mobile_gallery{
-		display: block !important;
-	}
 }
 /*# sourceMappingURL=style.css.map */
 

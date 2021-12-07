@@ -5,7 +5,7 @@ const Gallery = () => {
 	return (
 		<div id="gallery">
 			<h1 className="text-center mb-4">Picture Gallery</h1>
-			<div className="container" id="pc_gallery">
+			<div className="container d-none d-md-block" id="pc_gallery">
 				<div className="row d-flex align-items-center justify-content-around">
 					<div className="col-md-3 wrap text-center">
 						<Carousel id='1' />
@@ -18,7 +18,7 @@ const Gallery = () => {
 					</div>
 				</div>
 			</div>
-			<div className="container d-none" id="mobile_gallery">
+			<div className="container d-block d-md-none" id="mobile_gallery">
 				<div className="row d-flex align-items-center justify-content-around">
 					<div className="col-md-3 wrap text-center">
 						<Carousel id='1' />
