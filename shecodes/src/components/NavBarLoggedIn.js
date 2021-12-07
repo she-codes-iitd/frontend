@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import Logo from './Logo';
 
 function NavBarLoggedIn(props) {
@@ -10,22 +10,12 @@ function NavBarLoggedIn(props) {
 			props.setNav(true);
 		}
 	}
-    const closeHamburger = () => {
-		if (props.hamburger === true) {
-			props.setHamburger(false);
-		}
-		if (props.navMenu === true) {
-			props.setNav(false);
-		}
-	}
 
     return (
         <div>
         <div id="navbar" className="container">
             <div className="row pt-3">
-                {/* <div id="logo" className="col-md-3 d-flex align-items-center">
-                    <img src={logo} href="#" style={{ cursor: "pointer" }} height="35px" alt="SheCodes" />
-                </div> */}
+                 
 
                 <Logo img={props.logo} />
                 <div className="col-md-6 ms-5 d-flex justify-content-around align-items-center">

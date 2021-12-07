@@ -1,13 +1,14 @@
-import React from 'react'
-import NavBar2 from './NavBar2'
+import React, { useState } from 'react'
+import NavBarLoggedIn from './NavBarLoggedIn';
 
-function Header(props) {
+
+function Header2(props) {
 
 	return (
 		<div id="header">
 			
-			<NavBar2 logo={props.logo} hamburger={props.hamburger} navMenu={props.navMenu} setHamburger={props.setHamburger} setNav={props.setNav} />
-			
+			<NavBarLoggedIn logo={props.logo} hamburger={props.hamburger} navMenu={props.navMenu} setHamburger={props.setHamburger} setNav={props.setNav} />
+
 			<div className="container" id="para_learn">
 				<h1 id="learn" className="text-white">
 					<span className="yellow-text">Learn </span>on your <br /> class <span className="yellow-text">schedule</span>
@@ -18,4 +19,4 @@ function Header(props) {
 		</div>
 	);
 }
-export default Header;
+export default Header2;

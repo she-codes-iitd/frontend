@@ -1,15 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import App from './App';
 import SignInForm from './SignInForm';
 import SignUpForm from './SignUpForm';
 import reportWebVitals from './reportWebVitals';
+import Id from './Id';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 ReactDOM.render(
-	<React.StrictMode>
-		<App />
-	</React.StrictMode>,
+	<Router>
+	<Routes>
+		<Route path="/home" element={<App/>} />
+		<Route path="/id" element={<Id/>} />
+	</Routes>
+	</Router>
+	,
 	document.getElementById('root')
 );
 

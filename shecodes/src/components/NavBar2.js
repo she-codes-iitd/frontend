@@ -10,14 +10,6 @@ function NavBar2(props) {
 			props.setNav(true);
 		}
 	}
-	const closeHamburger = () => {
-		if (props.hamburger === true) {
-			props.setHamburger(false);
-		}
-		if (props.navMenu === true) {
-			props.setNav(false);
-		}
-	}
 
 	return (
 		<div>
