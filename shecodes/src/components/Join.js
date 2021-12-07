@@ -9,7 +9,7 @@ const Join = () => {
 				<div class="container">
 					<div class="row">
 						<div class="col-md-1"></div>
-						<div id="join_student" class="col-md-4">
+						<div id="join_student" class="col-md-4 mb-3">
 							<h5 class="text-white">Join as</h5>
 							<h3>Student</h3>
 							<p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi debitis quisquam
@@ -18,7 +18,7 @@ const Join = () => {
 							<a href="#" data-bs-toggle="modal" data-bs-target="#signInStudent" class="sign_in_button">Sign in</a>
 						</div>
 						<div class="col-md-2"></div>
-						<div id="join_teacher" class="col-md-4">
+						<div id="join_teacher" class="col-md-4 mb-3">
 							<h5 class="text-white">Join as</h5>
 							<h3>Teacher</h3>
 							<p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi debitis quisquam

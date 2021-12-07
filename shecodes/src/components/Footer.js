@@ -4,12 +4,11 @@ const Footer = () => {
 	return (
 		<footer>
 			<div className="container">
-				<div className="row">
+				<div className="row d-flex justify-content-between">
 					<div className="col-md-3">
 						<img src={logo} href="#" style={{ cursor: "pointer" }} height="35px" alt="SheCodes" />
 						<h4 className="ms-3">An initiative by NSS IIT Delhi</h4>
 					</div>
-					<div className="col-md-6"></div>
 					<div className="col-md-3">
 						<div className="row">
 							<div className="col-md-3">
@@ -30,7 +29,7 @@ const Footer = () => {
 				</div>
 
 				<div className="mt-5 mx-auto text-center pb-3" id="copyright">
-					<a href="mailto:abcd@gmail.com" id = "contact">abcd@gmail.com</a> <br />
+					<a href="mailto:abcd@gmail.com" id="contact">abcd@gmail.com</a> <br />
 					All rights reserved. NSS IIT Delhi. <span id="year">{new Date().getFullYear()}</span>
 				</div>
 			</div>
