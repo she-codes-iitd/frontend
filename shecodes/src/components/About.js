@@ -7,7 +7,7 @@ const About = () => {
 				<h1>Learn on your<br />class schedule</h1>
 				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br /> Facere, ad minus quisquam dolore officia
 					expedita.</p>
-				<a href="#" className="btn">Join Now</a>
+				<a href="#" data-bs-toggle="modal" data-bs-target="#signUpStudent" className="btn">Join Now</a>
 			</div>
 		</div>
 	)

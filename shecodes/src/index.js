@@ -14,8 +14,9 @@ ReactDOM.render(
 
 ReactDOM.render(
 	<React.StrictMode>
-		<Form name = "Student" notname = "Volunteer" />
-		<Form name = "Volunteer" notname = "Student" />
+		<Form name="Student" notname="Volunteer" signIn="true" />
+		<Form name="Volunteer" notname="Student" signIn="true" />
+		<Form name="Student" notname="Volunteer" signIn="false" />
 	</React.StrictMode>,
 	document.getElementById('modalRoot')
 );
