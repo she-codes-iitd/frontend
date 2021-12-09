@@ -2,26 +2,26 @@ import React from 'react'
 
 const Join = () => {
 	return (
-		<div id="join" class="text-center">
-			<div class="container">
+		<div id="join" className="text-center">
+			<div className="container">
 
 				<h2>Welcome to SheCodes</h2>
-				<div class="container">
-					<div class="row d-flex justify-content-around">
-						<div id="join_student" class="col-md-4 mb-3">
-							<h5 class="text-white">Join as</h5>
+				<div className="container">
+					<div className="row d-flex justify-content-around">
+						<div id="join_student" className="col-md-4 mb-3">
+							<h5 className="text-white">Join as</h5>
 							<h3>Student</h3>
-							<p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi debitis quisquam
+							<p className="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi debitis quisquam
 								consequatur porro hic
 								dicta.</p>
-							<a href="#" data-bs-toggle="modal" data-bs-target="#signInStudent" class="sign_in_button">Sign in</a>
+							<a data-bs-toggle="modal" data-bs-target="#signInStudent" className="sign_in_button">Sign in</a>
 						</div>
-						<div id="join_teacher" class="col-md-4 mb-3">
-							<h5 class="text-white">Join as</h5>
+						<div id="join_teacher" className="col-md-4 mb-3">
+							<h5 className="text-white">Join as</h5>
 							<h3>Teacher</h3>
-							<p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi debitis quisquam
+							<p className="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi debitis quisquam
 								consequatur porro hic dicta.</p>
-							<a href="#" class="sign_in_button" data-bs-toggle="modal" data-bs-target="#signInVolunteer">Sign in</a>
+							<a className="sign_in_button" data-bs-toggle="modal" data-bs-target="#signInVolunteer">Sign in</a>
 						</div>
 					</div>
 				</div>

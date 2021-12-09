@@ -6,7 +6,7 @@ const Carousel = (props) => {
 	const [class2, setClass2] = useState(false)
 	const [class3, setClass3] = useState(false)
 
-	if (props.id == '1') {
+	if (props.id === '1') {
 		if (class1 === false) {
 			setClass1(true);
 		}
@@ -17,7 +17,7 @@ const Carousel = (props) => {
 			setClass3(false);
 		}
 	}
-	else if (props.id == '2') {
+	else if (props.id === '2') {
 		if (class2 === false) {
 			setClass2(true);
 		}
@@ -28,7 +28,7 @@ const Carousel = (props) => {
 			setClass3(false);
 		}
 	}
-	else if (props.id == '3') {
+	else if (props.id === '3') {
 		if (class3 === false) {
 			setClass3(true);
 		}

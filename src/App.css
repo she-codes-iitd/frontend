@@ -1,4 +1,5 @@
 :root {
+  --dark_yellow: #f7d155;
   --yellow: #ffde73;
   --blue: #16324f;
   --secondary: #2f4760;
@@ -12,6 +13,12 @@ a {
 
 .yellow-text {
   color: var(--yellow);
+}
+.blue-text {
+	color: var(--blue);
+}
+.red-text {
+	color: #ed4950;
 }
 
 textarea:hover,
@@ -256,7 +263,8 @@ body.modal-open > :not(#modalRoot) {
   font-weight: bolder;
 }
 
-.signinforms {
+.signinforms,
+.signupforms {
   margin: auto;
   max-width: 550px;
   background: none;
@@ -265,41 +273,49 @@ body.modal-open > :not(#modalRoot) {
   font-weight: normal;
 }
 
-.signinforms input {
+.signinforms input,
+.signupforms input {
   background: none;
   border-width: 0 0 1.5px 0 !important;
   border-radius: 0 !important;
   border-bottom-color: var(--secondary) !important;
 }
 
-.signinforms input:focus {
+.signinforms input:focus,
+.signinforms input:active,
+.signupforms input:focus,
+.signupforms input:active {
   background: none;
   border-color: var(--blue) !important;
 }
 
-.signinforms input:active {
-  background: none;
-  border-color: var(--blue) !important;
-}
-
-.signinforms a {
+.signinforms a,
+.signupforms a {
   color: var(--blue);
   -webkit-text-decoration: underline var(--blue) solid;
   text-decoration: underline var(--blue) solid;
 }
 
-.signinforms button {
-  display: block;
+.signinforms .button,
+.signupforms .button {
+  display: block !important;
   background-color: var(--yellow) !important;
-  padding: 5px 50px;
-  border: var(--yellow) solid 2px;
-  border-radius: 12.5px;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
+  padding: 5px 50px !important;
+  border: var(--yellow) solid 2px !important;
+  border-radius: 12.5px !important;
+  -webkit-transition: all 0.3s ease-in !important;
+  transition: all 0.3s ease-in !important;
 }
 
-.signinforms button:hover {
+.signinforms .button:hover,
+.signinforms .button:active,
+.signinforms .button:focus,
+.signupforms .button:hover,
+.signupforms .button:active,
+.signupforms .button:focus {
+	border: var(--yellow) solid 2px !important;
   background-color: var(--dark_yellow) !important;
+	font-size: large !important;
 }
 
 /* GALLERY */
