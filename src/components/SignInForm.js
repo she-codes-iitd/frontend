@@ -1,6 +1,38 @@
-import React from 'react'
+import React, { useState } from 'react'
+import axios from 'axios';
 
 const SignInForm = (props) => {
+	const [user, setUser] = useState({
+		email: "", password: ""
+	});
+
+	let name, value;
+
+	const HandleInputs = (e) => {
+		name = e.target.name;
+		value = e.target.value;
+
+		setUser({ ...user, [name]: value });
+	}
+
+	const PostData = async () => {
+		try {
+			console.clear();
+			console.log(user);
+			// const { name, email, username, password } = user;
+
+			await axios
+				.post(`/student/login`, {
+					email: user.email,
+					password: user.password,
+				})
+		}
+		catch (err) {
+			console.log(err);
+		}
+		setUser("");
+	}
+
 	return (
 		<div className="modal fade" id={`signIn${props.name}`} tabIndex="-1" aria-labelledby="signInLabel" aria-hidden="true">
 			<div className="modal-dialog modal-dialog-centered modal-lg">
@@ -12,12 +44,12 @@ const SignInForm = (props) => {
 								<h2 className="my-4 text-center">Sign in as a {props.name}</h2>
 								<div className="container">
 
-									<form action="#" className="signinforms">
+									<form onSubmit={PostData} className="signinforms">
 										<div className="form-group">
-											<input type="text" placeholder="Username" className="form-control my-3" />
+											<input type="text" placeholder="Username" className="form-control my-3" onChange={HandleInputs} />
 										</div>
 										<div className="form-group">
-											<input type="password" placeholder="Password" className="form-control my-3" />
+											<input type="password" placeholder="Password" className="form-control my-3" onChange={HandleInputs} />
 										</div>
 										<div className="text-end">
 											<small><a href="#">Forgot Password?</a></small>

@@ -1,13 +1,16 @@
 import React from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
-const Captcha = () => {
+const Captcha = (props) => {
 	const onChange = () => {
-		console.log("HELLO");
+		props.buttonWork();
 	}
+
+	const API_KEY = process.env.REACT_APP_CAPTCHA_API_KEY;
+
 	return (
 		<ReCAPTCHA
-			sitekey="Your client site key"
+			sitekey={API_KEY}
 			onChange={onChange}
 		/>
 	)

@@ -20,9 +20,8 @@ const SignUpForm = (props) => {
 		setUser({ ...user, [name]: value });
 	}
 
-	const PostData = async (e) => {
+	const PostData = async () => {
 		try {
-			e.preventDefault();
 			console.clear();
 			console.log(user);
 			// const { name, email, username, password } = user;
@@ -62,7 +61,7 @@ const SignUpForm = (props) => {
 								<h2 className="my-4 text-center">Sign Up as a {props.name}</h2>
 								<div className="container">
 
-									<form className="signupforms">
+									<form onSubmit={PostData} className="signupforms">
 										{page === 'one' ?
 											<Page1 name={props.name} notname={props.notname} changePage={changePage} HandleInputs={HandleInputs} user={user} />
 											:

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Captcha from "../Captcha";
 
 const Page2 = (props) => {
@@ -6,12 +6,14 @@ const Page2 = (props) => {
 		props.HandleInputs(e);
 	}
 
-	const prevPage = () => {
-		props.changePage('one');
+	const[isDisabled, setDisable] = useState(true);
+
+	const buttonWork = () => {
+		setDisable(false);
 	}
 
-	const PostData = (e) => {
-		props.PostData(e);
+	const prevPage = () => {
+		props.changePage('one');
 	}
 
 	return (
@@ -37,7 +39,7 @@ const Page2 = (props) => {
 				</div>
 			</div>
 			<small className="d-flex justify-content-center mt-3">
-				<Captcha />
+				<Captcha buttonWork={buttonWork} />
 			</small>
 			<small className={"d-flex justify-content-center"}>
 				<small className="red-text">*ERRORS</small>
@@ -46,7 +48,7 @@ const Page2 = (props) => {
 				<button className="button my-4 blue-text" onClick={prevPage}>
 					<small><i className="fas fa-arrow-left"></i></small> Back
 				</button>
-				<button className="button my-4 blue-text" onClick={PostData}>
+				<button className="button my-4 blue-text" type="submit" disabled={isDisabled}>
 					Register
 				</button>
 			</div>
