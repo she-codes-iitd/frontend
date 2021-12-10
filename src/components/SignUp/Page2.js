@@ -6,14 +6,53 @@ const Page2 = (props) => {
 		props.HandleInputs(e);
 	}
 
-	const[isDisabled, setDisable] = useState(true);
+	const [isDisabled, setDisable] = useState(true);
+	const [isCaptcha, setCaptcha] = useState(false);
+	const [error, setError] = useState("");
 
 	const buttonWork = () => {
+		setCaptcha(true);
 		setDisable(false);
 	}
 
 	const prevPage = () => {
 		props.changePage('one');
+	}
+
+	const validate = () => {
+		if (!props.user.email) {
+			setError("Email is required");
+		}
+		else if (!props.user.name) {
+			setError("Name is required");
+		}
+		else if (!props.user.password) {
+			setError("Password is required");
+		}
+		else if (!props.user.phone) {
+			setError("Contact No. is required");
+		}
+		else if (!props.user.admission_number) {
+			setError("Admission No. is required");
+		}
+		else if (!props.user.dob) {
+			setError("Date of Birth is required");
+		}
+		else if (!props.user.school) {
+			setError("School Name is required");
+		}
+		else if (!props.user._class) {
+			setError("Class is required");
+		}
+		else if (!props.user.district) {
+			setError("District is required");
+		}
+		else if (!props.user.state) {
+			setError("State is required");
+		}
+		else {
+			setError("");
+		}
 	}
 
 	return (

@@ -45,7 +45,7 @@ const Page1 = (props) => {
 			<small className={isSame ? "d-none" : "d-flex justify-content-center"}>
 				<small className="red-text">*{error}</small>
 			</small>
-			<div className="d-flex justify-content-end" onClick={nextPage}>
+			<div className="d-flex justify-content-end">
 				<button className="button my-3 blue-text" onClick={nextPage}>
 					Next <small><i className="fas fa-arrow-right"></i></small>
 				</button>

@@ -24,7 +24,7 @@ const SignInForm = (props) => {
 			await axios
 				.post(`/student/login`, {
 					email: user.email,
-					password: user.password,
+					password: user.password
 				})
 		}
 		catch (err) {
@@ -46,15 +46,15 @@ const SignInForm = (props) => {
 
 									<form onSubmit={PostData} className="signinforms">
 										<div className="form-group">
-											<input type="text" placeholder="Username" className="form-control my-3" onChange={HandleInputs} />
+											<input type="email" placeholder="Email" className="form-control my-3" onChange={HandleInputs} required />
 										</div>
 										<div className="form-group">
-											<input type="password" placeholder="Password" className="form-control my-3" onChange={HandleInputs} />
+											<input type="password" placeholder="Password" className="form-control my-3" onChange={HandleInputs} required />
 										</div>
 										<div className="text-end">
 											<small><a href="#">Forgot Password?</a></small>
 										</div>
-										<input type="submit" className="button mx-auto my-5" value="Sign in" />
+										<button type="submit" className="button my-4 blue-text mx-auto">Sign in</button>
 										<div className="text-center my-3">
 											<a data-bs-toggle="modal" data-bs-target={`#signUp${props.name}`}>First Time? Sign Up Here</a>
 										</div>
