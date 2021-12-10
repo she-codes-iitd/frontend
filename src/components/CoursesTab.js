@@ -1,37 +1,40 @@
 import React from 'react';
+import {Link } from 'react-router-dom';
+import '../css/Courses.css';
 
-function CoursesTab() {
+function CoursesTab(props) {
 
 	return (
-		<section class="cards-wrapper">
-			<div className="card1 commoncard">
+		<>
+			<section class="cards-wrapper">
+				<nav>
+					<Link to="/id/ongoing">
+						<div class="container commoncard card1">
 
-				<a href="" >
+							<div class="overlay">
+								<div class="text">Ongoing Courses</div>
+							</div>
+						</div>
+					</Link>
+					<Link to="/id/completed">
+						<div class="container commoncard card2">
 
-					<h1>Ongoing Courses</h1>
+							<div class="overlay">
+								<div class="text">Completed Courses</div>
+							</div>
+						</div>
+					</Link>
+					<Link to="/id/all">
+						<div class="container commoncard card3">
 
-
-				</a>
-			</div>
-			<div className="card2 commoncard">
-
-				<a href="">
-					<h1>Completed Courses</h1>
-
-
-				</a>
-			</div>
-			<div className="card3 commoncard">
-
-				<a href="">
-
-					<h1>All Courses</h1>
-
-
-				</a>
-			</div>
-		</section>
-
+							<div class="overlay">
+								<div class="text">All Courses</div>
+							</div>
+						</div>
+					</Link>
+				</nav>
+			</section>
+		</>
 	);
 }
 

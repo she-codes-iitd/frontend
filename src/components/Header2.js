@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import NavBarLoggedIn from './NavBarLoggedIn';
-
+import '../css/ongoingtopic.css'
 
 function Header2(props) {
 
 	return (
-		<div id="header">
+		<div id="header2">
 			
 			<NavBarLoggedIn logo={props.logo} hamburger={props.hamburger} navMenu={props.navMenu} setHamburger={props.setHamburger} setNav={props.setNav} />
 

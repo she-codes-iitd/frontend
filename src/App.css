@@ -42,6 +42,7 @@ label:focus,
   top: 0;
   left: 0;
   z-index: -1;
+  background-color: red;
 }
 
 /* HEADER */
@@ -574,45 +575,4 @@ footer #copyright a {
     -webkit-transform: translateY(-8px) rotate(-45deg);
     transform: translateY(-8px) rotate(-45deg);
   }
-}
-
-.card1 {
-  position: absolute;
-  width: 370px;
-  height: 225px;
-  margin-left: 48px;
-  margin-top: -200px;
-  border: solid black;
-  border-radius: 13px;
-}
-
-.card2 {
-  position: absolute;
-  width: 370px;
-  height: 225px;
-  margin-left: 495px;
-  margin-top: -200px;
-  border: solid black;
-  border-radius: 13px;
-}
-
-.card3 {
-  position: absolute;
-  width: 370px;
-  height: 225px;
-  margin-left: 941px;
-  margin-top: -200px;
-  border: solid black;
-  border-radius: 13px;
-}
-
-.commoncard{
-  background-image: url("https://image.shutterstock.com/image-vector/check-back-soon-hand-lettering-600w-1379832464.jpg");
-}
-.img-fluid2 {
-  position: absolute;
-  width: 1440px;
-  height: 514px;
-  margin-left: 0px;
-  margin-top: 0px;
 }

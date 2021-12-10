@@ -1,0 +1,48 @@
+@import url(http://fonts.googleapis.com/css?family=Calibri:400,300,700);
+
+.card {
+  position: absolute;
+  background-color: #f3ffff;
+  background-clip: border-box;
+  border: 0px solid transparent;
+  border-radius: 13px;
+  width: 600px;
+  height: 400px;
+  
+}
+
+.card-body {
+  padding: 1.25rem;
+}
+
+.card .card-title {
+  position: absolute;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+ul.list-style-none li {
+  list-style: none;
+}
+
+ul.list-style-none li a {
+  color: #673ab7;
+  padding: 8px 0px;
+  display: block;
+  text-decoration: none;
+}
+
+.m-t-5 {
+  margin-top: 5px;
+}
+
+.w-30px {
+  width: 30px;
+}
+
+.topics{
+    position: absolute;
+    margin-left: 50px;
+    margin-top:50px;
+    
+}
