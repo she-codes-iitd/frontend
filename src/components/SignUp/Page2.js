@@ -16,7 +16,7 @@ const Page2 = (props) => {
 	}
 
 	const prevPage = () => {
-		props.changePage('one');
+		props.changePage();
 	}
 
 	const validate = () => {

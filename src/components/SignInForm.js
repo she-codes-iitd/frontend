@@ -1,10 +1,14 @@
 import React, { useState } from 'react'
 import axios from 'axios';
+import Loading from './Loading'
 
 const SignInForm = (props) => {
 	const [user, setUser] = useState({
 		email: "", password: ""
 	});
+
+	const [error, setError] = useState("");
+	const [loading, setLoading] = useState(false);
 
 	let name, value;
 
@@ -15,26 +19,47 @@ const SignInForm = (props) => {
 		setUser({ ...user, [name]: value });
 	}
 
-	const PostData = async () => {
+	const Login = async (e) => {
 		try {
+			e.preventDefault();
 			console.clear();
 			console.log(user);
-			// const { name, email, username, password } = user;
 
-			await axios
+			const config = {
+				headers: {
+					"Content-type": "application/json",
+				},
+			};
+			setLoading(true);
+
+			const { data } = await axios
 				.post(`/student/login`, {
 					email: user.email,
 					password: user.password
-				})
+				},
+					config
+				);
+			// console.log(data);
+			setLoading(false);
+			if (data.success === false) {
+				setError(data.message);
+				// console.log(data.message);
+			}
+			else {
+				// navigate('/id');
+			}
 		}
 		catch (err) {
-			console.log(err);
+			// console.log(err.message);
+			setError(err.message);
+			setLoading(false);
 		}
-		setUser("");
+		// setUser("");
 	}
 
 	return (
 		<div className="modal fade" id={`signIn${props.name}`} tabIndex="-1" aria-labelledby="signInLabel" aria-hidden="true">
+			{loading && <Loading />}
 			<div className="modal-dialog modal-dialog-centered modal-lg">
 				<div className="modal-content">
 					<div className="modal-body">
@@ -44,16 +69,20 @@ const SignInForm = (props) => {
 								<h2 className="my-4 text-center">Sign in as a {props.name}</h2>
 								<div className="container">
 
-									<form onSubmit={PostData} className="signinforms">
+
+									<form onSubmit={Login} className="signinforms">
 										<div className="form-group">
-											<input type="email" placeholder="Email" className="form-control my-3" onChange={HandleInputs} required />
+											<input type="email" placeholder="Email" name="email" className="form-control my-3" onChange={HandleInputs} required />
 										</div>
 										<div className="form-group">
-											<input type="password" placeholder="Password" className="form-control my-3" onChange={HandleInputs} required />
+											<input type="password" placeholder="Password" name="password" className="form-control my-3" onChange={HandleInputs} required />
 										</div>
 										<div className="text-end">
 											<small><a href="#">Forgot Password?</a></small>
 										</div>
+										<small className={"d-flex justify-content-center"}>
+											<small className="red-text">{error}</small>
+										</small>
 										<button type="submit" className="button my-4 blue-text mx-auto">Sign in</button>
 										<div className="text-center my-3">
 											<a data-bs-toggle="modal" data-bs-target={`#signUp${props.name}`}>First Time? Sign Up Here</a>
