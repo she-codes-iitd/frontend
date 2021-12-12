@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import Loading from './Loading'
 
@@ -9,6 +9,13 @@ const SignInForm = (props) => {
 
 	const [error, setError] = useState("");
 	const [loading, setLoading] = useState(false);
+
+	// useEffect(() => {
+	// 	const userInfo = localStorage.getItem("sheCodesUserInfo");
+	// 	if (userInfo) {
+
+	// 	}
+	// }, [])
 
 	let name, value;
 
@@ -42,12 +49,11 @@ const SignInForm = (props) => {
 			// console.log(data);
 			setLoading(false);
 			if (data.success === false) {
-				setError(data.message);
+				throw data;
 				// console.log(data.message);
 			}
-			else {
-				// navigate('/id');
-			}
+
+			localStorage.setItem("sheCodesUserInfo", JSON.stringify(data));
 		}
 		catch (err) {
 			// console.log(err.message);
@@ -59,7 +65,6 @@ const SignInForm = (props) => {
 
 	return (
 		<div className="modal fade" id={`signIn${props.name}`} tabIndex="-1" aria-labelledby="signInLabel" aria-hidden="true">
-			{loading && <Loading />}
 			<div className="modal-dialog modal-dialog-centered modal-lg">
 				<div className="modal-content">
 					<div className="modal-body">
@@ -83,7 +88,10 @@ const SignInForm = (props) => {
 										<small className={"d-flex justify-content-center"}>
 											<small className="red-text">{error}</small>
 										</small>
-										<button type="submit" className="button my-4 blue-text mx-auto">Sign in</button>
+										<button type="submit" className="button my-4 blue-text mx-auto">
+											Sign in &nbsp;
+											{loading && <Loading />}
+										</button>
 										<div className="text-center my-3">
 											<a data-bs-toggle="modal" data-bs-target={`#signUp${props.name}`}>First Time? Sign Up Here</a>
 										</div>

@@ -1,11 +1,11 @@
 import React from "react";
 import { Spinner } from "react-bootstrap";
 
-function Loading({ size = 200 }) {
+function Loading({ size = 15 }) {
 	return (
 		<div
 			style={{
-				display: "flex",
+				display: "inline",
 				justifyContent: "center",
 				alignItems: "center",
 				width: "100%",
@@ -17,7 +17,7 @@ function Loading({ size = 200 }) {
 					width: size,
 					height: size,
 				}}
-				animation="border" variant="light"
+				animation="border" variant="dark"
 			/>
 		</div>
 	);

@@ -20,6 +20,9 @@ a {
 .red-text {
 	color: #ed4950;
 }
+.green-text {
+	color: #28e040;
+}
 
 textarea:hover,
 input:hover,
@@ -293,7 +296,7 @@ body.modal-open > :not(#modalRoot) {
 .signupforms a {
   color: var(--blue);
   -webkit-text-decoration: underline var(--blue) solid;
-  text-decoration: underline var(--blue) solid;
+  text-decoration: underline var(--blue) solid !important;
 }
 
 .signinforms .button,
