@@ -53,8 +53,10 @@ const SignInForm = (props) => {
 				// console.log(data.message);
 			}
 
-			const str = window.location.href;
-			window.location.href = str + "id";
+			let currPage = window.location.href;
+			currPage = currPage.split('?')[0];
+			currPage = currPage.split('#')[0];
+			window.location.href = currPage + "id";
 			// localStorage.setItem("sheCodesUserInfo", JSON.stringify(data));
 		}
 		catch (err) {
