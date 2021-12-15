@@ -29,6 +29,16 @@
     border-radius: 13px;
   }
   
+  .card4 {
+    position: absolute;
+    width: 370px;
+    height: 225px;
+    margin-left: 495px;
+    margin-top: 0;
+    border: solid black;
+    border-radius: 13px;
+  }
+
   .commoncard{
     background-image: url("https://image.shutterstock.com/image-vector/check-back-soon-hand-lettering-600w-1379832464.jpg");
     margin-top: 30px;
@@ -81,8 +91,6 @@
   #contain #bg{
     background-color: #16324F; 
   }
-
-  .cards-wrapper{
-    height: 300px;
-
-  }
+.cards-wrapper{
+  height: 9000px;
+}

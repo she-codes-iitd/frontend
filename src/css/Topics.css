@@ -1,6 +1,6 @@
-/* @import url(http://fonts.googleapis.com/css?family=Calibri:400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Calibri:400,300,700);
 
-.card {
+.cards {
   position: absolute;
   background-color: #f3ffff;
   background-clip: border-box;
@@ -15,7 +15,7 @@
   padding: 1.25rem;
 }
 
-.card .card-title {
+.cards .card-title {
   position: absolute;
   font-weight: 600;
   margin-bottom: 10px;
@@ -45,4 +45,4 @@ ul.list-style-none li a {
     margin-left: 50px;
     margin-top:50px;
     
-} */
+}
