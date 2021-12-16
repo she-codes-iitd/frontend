@@ -1,13 +1,20 @@
 import react from 'react';
-
-function instruct(props){
+import Header3 from '../Header3';
+import '../../css/Instruct.css'
+import { Link } from 'react-router-dom';
+function Instruct(props) {
     return (
-        <div>
+        <div className='body-instruct'>
+            <div id="contain">
+
+                <Header3 logo={props.logo} hamburger={props.hamburger} navMenu={props.navMenu} setHamburger={props.setHamburger} setNav={props.setNav} />
+            </div>
 
             <div className='instruct'>
                 <h1>
                     Quiz Instructions
                 </h1>
+                <br />
                 <ul>
                     <li>
                         okkweiugfoiuwegas
@@ -23,10 +30,14 @@ function instruct(props){
                     </li>
                 </ul>
             </div>
-            <button className='attempt-now'>Attempt Now</button>
-            <button className='go-back'>Go Back</button>
+            <Link to="/id/ongoing/topic/quiz/attempt">
+                <button className='attempt-now'>Attempt Now</button>
+            </Link>
+            <Link to="/id/ongoing/topic">
+                <button className='go-back'>Go Back</button>
+            </Link>
         </div>
     );
 }
 
-export default instruct;
+export default Instruct;

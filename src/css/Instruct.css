@@ -1,0 +1,44 @@
+.instruct {
+  position: absolute;
+  width: 90%;
+  height: 280px;
+  background-color: #ffffff;
+  border-radius: 23px;
+  margin-top: -400px;
+  margin-left: 50px;
+  padding: 40px;
+  display: inline-block;
+  line-height: 1.5rem;
+}
+
+li{
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+.attempt-now {
+  position: absolute;
+  width: 293px;
+  height: 60px;
+  background-color: #16324f;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 23px;
+  margin-top: -100px;
+  color: #ffffff;
+  margin-left: 100px;
+}
+
+.go-back {
+  position: absolute;
+  width: 293px;
+  height: 60px;
+
+  background-color: #ffde73;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 23px;
+  margin-left: 500px;
+  margin-top: -100px;
+}
+
+.body-instruct{
+    background-color: #F3FFFF;
+}

@@ -1,14 +1,21 @@
 import react from 'react';
+import Header3 from '../Header3';
 
-function instruct(props){
+function Grade(props) {
     return (
         <div>
+            <div id="contain">
+
+                <Header3 logo={props.logo} hamburger={props.hamburger} navMenu={props.navMenu} setHamburger={props.setHamburger} setNav={props.setNav} />
+            </div>
 
             <div className='instruct'>
                 <h1>
                     Quiz Grade
                 </h1>
-                <ul>
+                <br/>
+                
+                <ul style={{listStyle: "none"}}>
                     <li>
                         achieved grade
                     </li>
@@ -26,4 +33,4 @@ function instruct(props){
     );
 }
 
-export default instruct;
+export default Grade;

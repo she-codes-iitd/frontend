@@ -42,7 +42,9 @@ label:focus,
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
 }
-
+body{
+  background-color: #f3ffff;
+}
 .wrap {
   word-wrap: break-word;
 }

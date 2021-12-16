@@ -1,6 +1,6 @@
 import react from 'react';
 
-function instruct(props) {
+function Review(props) {
     return (
         <div>
 
@@ -90,4 +90,4 @@ function instruct(props) {
     );
 }
 
-export default instruct;
+export default Review;
