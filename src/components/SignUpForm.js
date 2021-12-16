@@ -73,17 +73,17 @@ const SignUpForm = (props) => {
 				);
 
 			setLoading(false);
+			console.log(data);
 			if (data.success === false) {
+				console.log(data);
 				throw data;
-				// console.log(data.message);
 			}
 			setRegistered(true);
 			reloadPage();
 		}
 		catch (err) {
 			setLoading(false);
-			setError(err.message);
-			console.log(err);
+			setError(err.response.data.message);
 		}
 		// setUser("");
 	}
