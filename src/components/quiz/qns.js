@@ -1,95 +1,120 @@
-import react from 'react';
+import react, { Component } from 'react';
 import Header3 from '../Header3';
 import '../../css/Qns.css'
-function Qns(props) {
-    return (
-        <div>
-            <div id="contain">
-
-                <Header3 logo={props.logo} hamburger={props.hamburger} navMenu={props.navMenu} setHamburger={props.setHamburger} setNav={props.setNav} />
-            </div>
-
-            <div className='heading'>
+import EndQuiz from './EndQuiz';
 
 
-                <span className='quiz-type'>
-                    Quiz 1
-                </span>&emsp;&emsp;&emsp;&emsp;&emsp;
-                <span className='quiz-type'>
-                    Topic
-                </span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                <span className='end-quiz'>
-                    End quiz
-                </span>
-                <span className='timer'>
-                    Timer
-                </span>
-            </div>
-            <div className='qnsss' style={{marginTop: "-240px"}}>
-                <div className='qn'>
-                    <h3>Question 1</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut malesuada quam sed ipsum finibus, non rhoncus velit.</p>
+class Qns extends Component {
+    constructor() {
+        super();
+        this.state = {
+            show: false
+        };
+        this.showModal = this.showModal.bind(this);
+        this.hideModal = this.hideModal.bind(this);
+    }
 
-                    <ul>
-                        <li>
-                            hgcydt
-                        </li>
-                        <li>
-                            jhyfutgjyu
-                        </li>
-                        <li>
-                            jhfgy
-                        </li>
-                        <li>
-                            jyfuyfkj
-                        </li>
-                    </ul>
-                    <button className='clear'>clear selection</button>
-                </div>
-                <div className='qn'>
-                    <h3>Question 1</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut malesuada quam sed ipsum finibus, non rhoncus velit.</p>
+    showModal = () => {
+        this.setState({ show: true });
+    };
 
-                    <ul>
-                        <li>
-                            hgcydt
-                        </li>
-                        <li>
-                            jhyfutgjyu
-                        </li>
-                        <li>
-                            jhfgy
-                        </li>
-                        <li>
-                            jyfuyfkj
-                        </li>
-                    </ul>
-                    <button className='clear'>clear selection</button>
-                </div>
-                <div className='qn'>
-                    <h3>Question 1</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut malesuada quam sed ipsum finibus, non rhoncus velit.</p>
+    hideModal = () => {
+        this.setState({ show: false });
+    };
 
-                    <ul>
-                        <li>
-                            hgcydt
-                        </li>
-                        <li>
-                            jhyfutgjyu
-                        </li>
-                        <li>
-                            jhfgy
-                        </li>
-                        <li>
-                            jyfuyfkj
-                        </li>
-                    </ul>
-                    <button className='clear'>clear selection</button>
+    render() {
+        return (
+            <div>
+                <div id="contain">
+
+                    <Header3 logo={this.props.logo} hamburger={this.props.hamburger} navMenu={this.props.navMenu} setHamburger={this.props.setHamburger} setNav={this.props.setNav} />
                 </div>
 
+                <div className='heading'>
+
+
+                    <span className='quiz-type'>
+                        Quiz 1
+                    </span>&emsp;&emsp;&emsp;&emsp;&emsp;
+                    <span className='quiz-type'>
+                        Topic
+                    </span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                    <EndQuiz show={this.state.show} handleClose={this.hideModal}>
+                        <p className='modal-body-end'>End the quiz? </p>
+                    </EndQuiz>
+                    <button className="end-quiz" type="button" onClick={this.showModal}>
+                        End Quiz
+                    </button>
+                    <span className='timer'>
+                        Timer
+                    </span>
+                </div>
+                <div className='qnsss' style={{ marginTop: "-240px" }}>
+                    <div className='qn'>
+                        <h3>Question 1</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut malesuada quam sed ipsum finibus, non rhoncus velit.</p>
+
+                        <ul>
+                            <li>
+                                hgcydt
+                            </li>
+                            <li>
+                                jhyfutgjyu
+                            </li>
+                            <li>
+                                jhfgy
+                            </li>
+                            <li>
+                                jyfuyfkj
+                            </li>
+                        </ul>
+                        <button className='clear'>clear selection</button>
+                    </div>
+                    <div className='qn'>
+                        <h3>Question 1</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut malesuada quam sed ipsum finibus, non rhoncus velit.</p>
+
+                        <ul>
+                            <li>
+                                hgcydt
+                            </li>
+                            <li>
+                                jhyfutgjyu
+                            </li>
+                            <li>
+                                jhfgy
+                            </li>
+                            <li>
+                                jyfuyfkj
+                            </li>
+                        </ul>
+                        <button className='clear'>clear selection</button>
+                    </div>
+                    <div className='qn'>
+                        <h3>Question 1</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut malesuada quam sed ipsum finibus, non rhoncus velit.</p>
+
+                        <ul>
+                            <li>
+                                hgcydt
+                            </li>
+                            <li>
+                                jhyfutgjyu
+                            </li>
+                            <li>
+                                jhfgy
+                            </li>
+                            <li>
+                                jyfuyfkj
+                            </li>
+                        </ul>
+                        <button className='clear'>clear selection</button>
+                    </div>
+
+                </div>
             </div>
-        </div>
-    );
+        );
+    }
 }
 
 export default Qns;

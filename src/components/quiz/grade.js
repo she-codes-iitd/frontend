@@ -1,5 +1,6 @@
 import react from 'react';
 import Header3 from '../Header3';
+import {Link} from 'react-router-dom';
 
 function Grade(props) {
     return (
@@ -27,10 +28,11 @@ function Grade(props) {
                     </li>
                 </ul>
             </div>
-            <button className='attempt-now'>Review Quiz</button>
-            <button className='go-back'>Go Back</button>
+            <Link to="/id/ongoing/topic/quiz/review"> <button className='attempt-now'>Review Quiz</button></Link>
+            <button className='go-back'>Go to Home</button>
         </div>
     );
 }
 
 export default Grade;
+

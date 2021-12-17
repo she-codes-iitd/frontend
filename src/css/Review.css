@@ -1,0 +1,13 @@
+.end-quiz-review {
+  width: 500px;
+  height: 180px;
+  margin-left: 800px;
+  background: #16324f;
+  border-radius: 23px;
+  color: white;
+  text-align: center;
+  padding: 17px;
+  padding-left: 60px;
+  padding-right: 60px;
+  z-index: 0;
+}

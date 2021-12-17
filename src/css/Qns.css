@@ -11,7 +11,7 @@
 }
 
 .quiz-type {
-  width: 88px;
+  width: 100px;
   height: 41px;
 
   font-family: Nunito Sans;
@@ -25,17 +25,16 @@
 }
 
 .end-quiz {
-  position: absolute;
   width: 202px;
   height: 60px;
-  left: 700px;
-  top: 15px;
+  margin-left: 200px;
 
   background: #16324f;
   border-radius: 23px;
   color: white;
   text-align: center;
-  padding: 15px;
+  padding: 17px;
+  z-index: 0;
 }
 
 .timer {
@@ -64,8 +63,24 @@
   background: #ffffff;
   box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 23px;
-  width: 90%;
+  width: 92%;
   margin-left: 50px;
   padding: 20px;
   margin-bottom: 20px;
+}
+
+.modal-body-end {
+  position: absolute;
+  width: 215px;
+  height: 49px;
+  left: 240px;
+  top: 60px;
+
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 49px;
+
+  color: #000000;
 }
