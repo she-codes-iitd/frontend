@@ -1,5 +1,7 @@
 import React from 'react'
 import Logo from './Logo';
+import { yellow } from '@mui/material/colors';
+import Avatar from '@mui/material/Avatar';
 
 function NavBarLoggedIn(props) {
     const openHamburger = () => {
@@ -20,7 +22,7 @@ function NavBarLoggedIn(props) {
                 <Logo img={props.logo} />
                 <div className="col-md-6 ms-5 d-flex justify-content-around align-items-center">
                     <div className="d-flex justify-content-center flex-column">
-                        <a href="#about" className="p-2 pb-1">ok</a>
+                        <a href="#about" className="p-2 pb-1"><Avatar></Avatar></a>
                         <div className="active line mx-auto"></div>
                     </div>
                     <div className="d-flex justify-content-center">
