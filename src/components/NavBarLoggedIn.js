@@ -1,7 +1,5 @@
 import React from 'react'
 import Logo from './Logo';
-import { yellow } from '@mui/material/colors';
-import Avatar from '@mui/material/Avatar';
 
 function NavBarLoggedIn(props) {
     const openHamburger = () => {
