@@ -1,5 +1,10 @@
 import React from 'react'
 import Logo from './Logo';
+import SearchIcon from '@mui/icons-material/Search';
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import PersonIcon from '@mui/icons-material/Person';
 
 function NavBarLoggedIn(props) {
     const openHamburger = () => {
@@ -20,26 +25,26 @@ function NavBarLoggedIn(props) {
                 <Logo img={props.logo} />
                 <div className="col-md-6 ms-5 d-flex justify-content-around align-items-center">
                     <div className="d-flex justify-content-center flex-column">
-                        <a href="#about" className="p-2 pb-1"></a>
+                        <a href="#about" className="p-2 pb-1"><SearchIcon/></a>
                         <div className="active line mx-auto"></div>
                     </div>
                     <div className="d-flex justify-content-center">
-                        <a href="#initiative" className="p-2 pb-1">ok</a>
+                        <a href="#initiative" className="p-2 pb-1"><CalendarTodayIcon/></a>
                         <div className="line mx-auto"></div>
                     </div>
                     <div className="d-flex justify-content-center">
-                        <a href="#gallery" className="p-2 pb-1">ok</a>
+                        <a href="#gallery" className="p-2 pb-1"><QuestionMarkIcon/></a>
                         <div className="line mx-auto"></div>
                     </div>
                     <div className="d-flex justify-content-center">
-                        <a href="#contact" className="p-2 pb-1">ok</a>
+                        <a href="#contact" className="p-2 pb-1"><NotificationsIcon/></a>
                         <div className="line mx-auto"></div>
                     </div>
                 </div>
                 <div className="col-md-2 ms-auto">
                     <div className="d-flex justify-content-center align-items-center">
-                        <a href="#join">
-                            <div id="button" className="px-4 btn">Profile</div>
+                        <a href="">
+                            <div id="button" className="px-4 btn"><PersonIcon/></div>
                         </a>
                     </div>
                 </div>
