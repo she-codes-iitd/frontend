@@ -68,16 +68,16 @@ function NavBarLoggedIn(props) {
                 </div>
                 <ul className={props.navMenu ? 'my-nav-menu ps-0 me-auto show' : 'my-nav-menu ps-0 me-auto'}>
                     <li className="my-nav-item active">
-                        <a href="#about" className="my-nav-link">ok</a>
+                        <a href="#about" className="my-nav-link"><SearchIcon/></a>
                     </li>
                     <li className="my-nav-item">
-                        <a href="#initiative" className="my-nav-link">ok</a>
+                        <a href="#initiative" className="my-nav-link"><CalendarTodayIcon/></a>
                     </li>
                     <li className="my-nav-item">
-                        <a href="#gallery" className="my-nav-link">ok</a>
+                        <a href="#gallery" className="my-nav-link"><QuestionMarkIcon/></a>
                     </li>
                     <li className="my-nav-item">
-                        <a href="#contact" className="my-nav-link">ok</a>
+                        <a href="#contact" className="my-nav-link"><NotificationsIcon/></a>
                     </li>
                 </ul>
             </div>
