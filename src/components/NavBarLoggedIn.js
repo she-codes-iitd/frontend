@@ -43,11 +43,20 @@ function NavBarLoggedIn(props) {
                     </div>
                     <div className="col-md-2 ms-auto">
                         <div className="d-flex justify-content-center align-items-center">
-                            <a href="">
-                                <div id="button" className="px-4 btn">
-                                    <PersonIcon/>
-                                </div>
-                            </a>
+
+
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Profile
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/id">Student</a></li>
+                                    <li><a class="dropdown-item" href="#">Mentor</a></li>
+                                    
+                                    <li><hr class="dropdown-divider" /></li>
+                                    <li><a class="dropdown-item" href="/">Logout</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
