@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react';
+import Calendar from 'react-calendar';
 import Logo from './Logo';
 import SearchIcon from '@mui/icons-material/Search';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
@@ -16,6 +17,8 @@ function NavBarLoggedIn(props) {
         }
     }
 
+    const [value, onChange] = useState(new Date());
+
     return (
         <div style={{ backgroundColor: "#16324f" }}>
             <div id="navbar" className="container">
@@ -25,19 +28,30 @@ function NavBarLoggedIn(props) {
                     <Logo img={props.logo} />
                     <div className="col-md-6 ms-5 d-flex justify-content-around align-items-center">
                         <div className="d-flex justify-content-center flex-column">
-                            <a href="#about" className="p-2 pb-1"><SearchIcon /></a>
+                            <a className="p-2 pb-1"><SearchIcon /></a>
                             <div className="active line mx-auto"></div>
                         </div>
                         <div className="d-flex justify-content-center">
-                            <a href="#initiative" className="p-2 pb-1"><CalendarTodayIcon /></a>
+                            <a className="p-2 pb-1">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <CalendarTodayIcon />
+                                    </button>
+                                    <ul class="dropdown-menu" style={{width: '250px'}}>
+                                        <li><a class="dropdown-item"><Calendar onChange={onChange} value={value}/></a></li>
+                                    </ul>
+                                </div>
+
+
+                            </a>
                             <div className="line mx-auto"></div>
                         </div>
                         <div className="d-flex justify-content-center">
-                            <a href="#gallery" className="p-2 pb-1"><QuestionMarkIcon /></a>
+                            <a className="p-2 pb-1"><QuestionMarkIcon /></a>
                             <div className="line mx-auto"></div>
                         </div>
                         <div className="d-flex justify-content-center">
-                            <a href="#contact" className="p-2 pb-1"><NotificationsIcon /></a>
+                            <a className="p-2 pb-1"><NotificationsIcon /></a>
                             <div className="line mx-auto"></div>
                         </div>
                     </div>
@@ -47,12 +61,12 @@ function NavBarLoggedIn(props) {
 
                             <div class="btn-group">
                                 <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Profile
+                                    <PersonIcon />
                                 </button>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="/id">Student</a></li>
                                     <li><a class="dropdown-item" href="#">Mentor</a></li>
-                                    
+
                                     <li><hr class="dropdown-divider" /></li>
                                     <li><a class="dropdown-item" href="/">Logout</a></li>
                                 </ul>
