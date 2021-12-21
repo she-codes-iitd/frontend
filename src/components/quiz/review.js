@@ -6,7 +6,7 @@ import EndQuiz from './EndQuiz';
 import { Link } from 'react-router-dom';
 
 
-function Qns(props) {
+function Review(props) {
     const corrAns = [1, 1, 4];
     const stuAns = [1, 4, 0];
     //0 means NA
@@ -105,5 +105,5 @@ function Qns(props) {
 }
 
 
-export default Qns;
+export default Review;
 

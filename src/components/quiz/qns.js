@@ -2,7 +2,8 @@ import react, { Component } from 'react';
 import Header3 from '../Header3';
 import '../../css/Qns.css'
 import EndQuiz from './EndQuiz';
-
+import Countdown from 'react-countdown';
+import EndedQuiz from './EndedQuiz';
 
 class Qns extends Component {
     constructor() {
@@ -21,6 +22,23 @@ class Qns extends Component {
     hideModal = () => {
         this.setState({ show: false });
     };
+
+
+    renderer = ({ hours, minutes, seconds, completed }) => {
+        if (completed) {
+            
+            return (
+                <div>
+                <EndedQuiz show2={true}>
+                    <p className='modal-body-end'>The quiz has ended </p>
+
+                </EndedQuiz>
+                </div>
+                );
+        } else {
+            return <span className='timer'>{hours}:{minutes}:{seconds}</span>;
+        }
+    }
 
     render() {
         return (
@@ -45,9 +63,10 @@ class Qns extends Component {
                     <button className="end-quiz" type="button" onClick={this.showModal}>
                         End Quiz
                     </button>
-                    <span className='timer'>
-                        Timer
-                    </span>
+
+                    <Countdown date={Date.now() + 5000} renderer={this.renderer} />
+
+
                 </div>
                 <div className='qnsss' style={{ marginTop: "-240px" }}>
                     <div className='qn'>
