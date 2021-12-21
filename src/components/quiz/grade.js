@@ -28,7 +28,7 @@ function Grade(props) {
                     </li>
                 </ul>
             </div>
-            <Link to="/id/ongoing/topic/quiz/review"> <button className='attempt-now'>Review Quiz</button></Link>
+            <Link to="/id/ongoing/topics/topic/quiz/review"> <button className='attempt-now'>Review Quiz</button></Link>
             <button className='go-back'>Go to Home</button>
         </div>
     );

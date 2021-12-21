@@ -30,10 +30,10 @@ function Instruct(props) {
                     </li>
                 </ul>
             </div>
-            <Link to="/id/ongoing/topic/quiz/attempt">
+            <Link to="/id/ongoing/topics/topic/quiz/attempt">
                 <button className='attempt-now'>Attempt Now</button>
             </Link>
-            <Link to="/id/ongoing/topic">
+            <Link to="/id/ongoing/topics/topic">
                 <button className='go-back'>Go Back</button>
             </Link>
         </div>

@@ -30,7 +30,7 @@ function Qns(props) {
                 <span className='quiz-type'>
                     Topic
                 </span>
-                <Link to="/id/ongoing/topic/quiz">
+                <Link to="/id/ongoing/topics/topic/quiz">
                     <span className='end-quiz-review'>Back</span>
                 </Link>
             </div>

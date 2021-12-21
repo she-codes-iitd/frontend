@@ -29,7 +29,7 @@ function NavBarLoggedIn(props) {
                     <div className="col-md-6 ms-5 d-flex justify-content-around align-items-center">
                         <div className="d-flex justify-content-center flex-column">
                             <a className="p-2 pb-1"><SearchIcon /></a>
-                            <div className="active line mx-auto"></div>
+                            
                         </div>
                         <div className="d-flex justify-content-center">
                             <a className="p-2 pb-1">
