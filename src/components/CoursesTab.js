@@ -12,34 +12,26 @@ function CoursesTab(props) {
 				<img src={id_page} id="bg" className="img-fluid2" alt="" />
 				<Header2 logo={props.logo} hamburger={props.hamburger} navMenu={props.navMenu} setHamburger={props.setHamburger} setNav={props.setNav} />
 			</div>
-			<section class="cards-wrapper">
-				<nav>
-					<Link to="/id/ongoing">
-						<div class="container commoncard card1">
+			<div class="grid-container-main">
+				<Link to="/id/ongoing">
+					<div class="grid-item-main">Ongoing Courses
 
-							<div class="overlay">
-								<div class="text">Ongoing Courses</div>
-							</div>
-						</div>
-					</Link>
-					<Link to="/id/completed">
-						<div class="container commoncard card2">
+					</div>
+				</Link>
+				<Link to="/id/completed">
+					<div class="grid-item-main">Completed Courses
 
-							<div class="overlay">
-								<div class="text">Completed Courses</div>
-							</div>
-						</div>
-					</Link>
-					<Link to="/id/all">
-						<div class="container commoncard card3">
+					</div>
+				</Link>
+				<Link to="/id/all">
+					<div class="grid-item-main">
 
-							<div class="overlay">
-								<div class="text">All Courses</div>
-							</div>
-						</div>
-					</Link>
-				</nav>
-			</section>
+						All courses
+
+
+					</div>
+				</Link>
+			</div>
 		</>
 	);
 }
