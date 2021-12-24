@@ -4,7 +4,7 @@ import '../css/All.css';
 import Header2 from './Header2';
 import id_page from '../imgs/Group19.png'
 
-function Ongoing(props) {
+function AllCourses(props) {
 
 	return (
 		<>
@@ -13,17 +13,25 @@ function Ongoing(props) {
 				<Header2 logo={props.logo} hamburger={props.hamburger} navMenu={props.navMenu} setHamburger={props.setHamburger} setNav={props.setNav} />
 			</div>
 			<div class="grid-container-all">
-            <Link to="/id/ongoing/topics">
 				<div class="grid-item-all">1
-				
+
 				</div>
-                </Link>
 				<div class="grid-item-all">2
-				
+
 				</div>
 				<div class="grid-item-all">3
 				
+
+				</div>
+				<div class="grid-item-all">4
+
+				</div>
+				<div class="grid-item-all">5
 				
+
+				</div>
+				<div class="grid-item-all">6
+
 				</div>
 			</div>
 
@@ -31,4 +39,4 @@ function Ongoing(props) {
 	);
 }
 
-export default Ongoing;
+export default AllCourses;
