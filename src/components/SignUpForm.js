@@ -9,7 +9,7 @@ const SignUpForm = (props) => {
 	const [error, setError] = useState("");
 	const [loading, setLoading] = useState(false);
 	const [registered, setRegistered] = useState(false);
-	const [isDisabled, setDisable] = useState(false);
+	const [isDisabled, setDisable] = useState(true);
 	// const [isCaptcha, setCaptcha] = useState(false);
 
 	const buttonWork = () => {
@@ -73,17 +73,17 @@ const SignUpForm = (props) => {
 				);
 
 			setLoading(false);
+			console.log(data);
 			if (data.success === false) {
+				console.log(data);
 				throw data;
-				// console.log(data.message);
 			}
 			setRegistered(true);
 			reloadPage();
 		}
 		catch (err) {
 			setLoading(false);
-			setError(err.message);
-			console.log(err);
+			setError(err.response.data.message);
 		}
 		// setUser("");
 	}
@@ -141,7 +141,7 @@ const SignUpForm = (props) => {
 												</div>
 											</div>
 											<small className="d-flex justify-content-center mt-3">
-												{/* <Captcha buttonWork={buttonWork} /> */}
+												<Captcha buttonWork={buttonWork} />
 											</small>
 											<small className={"d-flex justify-content-center"}>
 												<small className="red-text">{error}</small>

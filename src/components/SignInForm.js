@@ -30,7 +30,7 @@ const SignInForm = (props) => {
 		try {
 			e.preventDefault();
 			console.clear();
-			console.log(user);
+			// console.log(user);
 
 			const config = {
 				headers: {
@@ -53,7 +53,11 @@ const SignInForm = (props) => {
 				// console.log(data.message);
 			}
 
-			localStorage.setItem("sheCodesUserInfo", JSON.stringify(data));
+			let currPage = window.location.href;
+			currPage = currPage.split('?')[0];
+			currPage = currPage.split('#')[0];
+			window.location.href = currPage + "id";
+			// localStorage.setItem("sheCodesUserInfo", JSON.stringify(data));
 		}
 		catch (err) {
 			// console.log(err.message);
