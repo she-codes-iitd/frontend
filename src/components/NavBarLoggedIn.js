@@ -34,7 +34,7 @@ function NavBarLoggedIn(props) {
                         <div className="d-flex justify-content-center">
                             <a className="p-2 pb-1">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style={{ backgroundColor: "#16324f", color: "#ffde73", borderStyle: "none"}}>
                                         <CalendarTodayIcon />
                                     </button>
                                     <ul class="dropdown-menu" style={{width: '250px'}}>
@@ -60,7 +60,7 @@ function NavBarLoggedIn(props) {
 
 
                             <div class="btn-group">
-                                <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style={{ backgroundColor: "#16324f", color: "#ffde73", borderStyle: "none"}}>
                                     <PersonIcon />
                                 </button>
                                 <ul class="dropdown-menu">
