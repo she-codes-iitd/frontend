@@ -13,17 +13,17 @@ function CoursesTab(props) {
 				<Header2 logo={props.logo} hamburger={props.hamburger} navMenu={props.navMenu} setHamburger={props.setHamburger} setNav={props.setNav} />
 			</div>
 			<div class="grid-container-main">
-				<Link to="/student-dashboard/ongoing">
+				<Link to="/id/ongoing">
 					<div class="grid-item-main">Ongoing Courses
 
 					</div>
 				</Link>
-				<Link to="/student-dashboard/completed">
+				<Link to="/id/completed">
 					<div class="grid-item-main">Completed Courses
 
 					</div>
 				</Link>
-				<Link to="/student-dashboard/all">
+				<Link to="/id/all">
 					<div class="grid-item-main">
 
 						All courses

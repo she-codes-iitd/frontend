@@ -13,7 +13,7 @@ function Ongoing(props) {
 				<Header2 logo={props.logo} hamburger={props.hamburger} navMenu={props.navMenu} setHamburger={props.setHamburger} setNav={props.setNav} />
 			</div>
 			<div class="grid-container-all">
-            <Link to="/student-dashboard/ongoing/topics">
+            <Link to="/id/ongoing/topics">
 				<div class="grid-item-all">1
 				
 				</div>

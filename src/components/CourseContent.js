@@ -25,7 +25,7 @@ function courseContent(props) {
                     <button className="tab1">Video 1</button>
                     <hr />
                     <button className="other">
-                        <Link to="/student-dashboard/ongoing/topics/topic/quiz">
+                        <Link to="/id/ongoing/topics/topic/quiz">
                             Quiz 1
                         </Link>
                     </button>

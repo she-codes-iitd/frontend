@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import Calendar from 'react-calendar';
 import Logo from './Logo';
 import SearchIcon from '@mui/icons-material/Search';
@@ -18,6 +18,17 @@ function NavBarLoggedIn(props) {
     }
 
     const [value, onChange] = useState(new Date());
+    const [isLoggedIn, setLogged] = useState(true);
+
+    function toggleSignIn (){
+
+        setLogged(()=>{
+            fetch('http://localhost:3000/student/logout')
+            .then(res => res.json())
+            .then(response => window.location="/"
+            );
+        });
+    }
 
     return (
         <div style={{ backgroundColor: "#16324f" }}>
@@ -68,7 +79,7 @@ function NavBarLoggedIn(props) {
                                     <li><a class="dropdown-item" href="#">Mentor</a></li>
 
                                     <li><hr class="dropdown-divider" /></li>
-                                    <li><a class="dropdown-item" href="/">Logout</a></li>
+                                    <li><a class="dropdown-item" onClick={toggleSignIn}>Logout</a></li>
                                 </ul>
                             </div>
                         </div>

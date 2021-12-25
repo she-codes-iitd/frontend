@@ -12,7 +12,7 @@ ReactDOM.render(
 	<Router>
 		<Routes>
 			<Route path="/" element={<App />} />
-			<Route path="/student-dashboard/*" element={<Id />} />
+			<Route path="/id/*" element={<Id />} />
 		</Routes>
 	</Router>
 	,
