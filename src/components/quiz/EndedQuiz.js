@@ -11,7 +11,7 @@ const EndedQuiz = ({ show2, children }) => {
     <div className={showHideClassName}>
       <section className="modal-main-end">
         {children}
-        <Link to="/id/ongoing/topics/topic/quiz/grade"><button className="see-grades">See grades!</button></Link>
+        <Link to="/student-dashboard/ongoing/topics/topic/quiz/grade"><button className="see-grades">See grades!</button></Link>
       </section>
     </div>
   );

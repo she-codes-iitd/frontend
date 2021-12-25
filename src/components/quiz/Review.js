@@ -30,7 +30,7 @@ function Review(props) {
                 <span className='quiz-type'>
                     Topic
                 </span>
-                <Link to="/id/ongoing/topics/topic/quiz">
+                <Link to="/student-dashboard/ongoing/topics/topic/quiz">
                     <span className='end-quiz-review'>Back</span>
                 </Link>
             </div>

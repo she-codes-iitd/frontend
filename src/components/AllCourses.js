@@ -3,8 +3,7 @@ import '../css/All.css';
 import Header2 from './Header2';
 import id_page from '../imgs/Group19.png'
 
-import React, {useEffect ,useState} from 'react'
-import axios from 'axios';
+import React, {useEffect ,useState} from 'react';
 function AllCourses(props) {
 	const [courses, setCourses] = useState([]);
 	useEffect(() => {

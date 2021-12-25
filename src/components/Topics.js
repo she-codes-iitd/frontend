@@ -12,7 +12,7 @@ function Topics() {
 
                         <ul class="list-style-none">
                             <li class="d-flex no-block card-body">
-                                <div> <Link to="/id/ongoing/topics/topic"> Topic 1
+                                <div> <Link to="/student-dashboard/ongoing/topics/topic"> Topic 1
                                 </Link>
                                 </div>
                             </li>

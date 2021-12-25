@@ -11,7 +11,7 @@ const EndQuiz = ({ handleClose, show, children }) => {
     <div className={showHideClassName}>
       <section className="modal-main-end">
         {children}
-        <Link to="/id/ongoing/topics/topic/quiz/grade"><button className="yes-modal">Yes</button></Link>
+        <Link to="/student-dashboard/ongoing/topics/topic/quiz/grade"><button className="yes-modal">Yes</button></Link>
         <button className="no-modal" onClick={handleClose}>
           No
         </button>
