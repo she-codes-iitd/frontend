@@ -5,7 +5,7 @@ import Captcha from "./Captcha";
 import Loading from './Loading'
 import Verify from "./Verify";
 
-const SignUpForm = (props) => {
+const SignUpFormVolunteer = (props) => {
 	const [error, setError] = useState("");
 	const [loading, setLoading] = useState(false);
 	const [registered, setRegistered] = useState(false);
@@ -17,7 +17,7 @@ const SignUpForm = (props) => {
 	}
 
 	const [user, setUser] = useState({
-		email: "", password: "", name: "", admission_number: "", _class: "", school: "", dob: "", phone: "", district: "", state: "", cpassword: ""
+		email: "", password: "", name: "", id_number: "", collegeState: "", college: "", dob: "", phone: "", district: "", state: "", cpassword: ""
 	});
 
 	let name, value;
@@ -89,7 +89,7 @@ const SignUpForm = (props) => {
 	}
 
 	return (
-		<div className="modal fade" id={`signUpStudent`} tabIndex="-1" aria-labelledby="signInLabel" aria-hidden="true">
+		<div className="modal fade" id={`signUp${props.name}`} tabIndex="-1" aria-labelledby="signInLabel" aria-hidden="true">
 			<div className="modal-dialog modal-dialog-centered modal-lg">
 				<div className="modal-content">
 					<div className="modal-body">
@@ -122,23 +122,23 @@ const SignUpForm = (props) => {
 										<>
 											<div className="row">
 												<div className="col-md-6">
-													<input type="text" name="admission_number" placeholder="Admission Number" className="form-control my-2" onChange={HandleInputs} defaultValue={user.admission_number} required />
+													<input type="text" name="college" placeholder="College Name" className="form-control my-2" onChange={HandleInputs} defaultValue={user.college} required />
+												</div>
+												<div className="col-md-6">
+													<input type="number" name="collegeState" placeholder="College State" className="form-control my-2" onChange={HandleInputs} defaultValue={user.collegeState} min="1" max="12" required />
+												</div>
+												<div className="col-md-6">
+													<input type="text" name="id_number" placeholder="College ID Number" className="form-control my-2" onChange={HandleInputs} defaultValue={user.id_number} required />
 												</div>
 												<div className="col-md-6">
 													<input type="text" name="dob" placeholder="Date of Birth" onFocus={(e) => e.target.type = 'date'} className="form-control my-2" onChange={HandleInputs} defaultValue={user.dob} required />
 												</div>
-												<div className="col-md-6">
-													<input type="text" name="school" placeholder="School Name" className="form-control my-2" onChange={HandleInputs} defaultValue={user.school} required />
-												</div>
-												<div className="col-md-6">
-													<input type="number" name="_class" placeholder="Class" className="form-control my-2" onChange={HandleInputs} defaultValue={user._class} min="1" max="12" required />
-												</div>
-												<div className="col-md-6">
+												{/* <div className="col-md-6">
 													<input type="text" name="district" placeholder="District" className="me-2 form-control my-2" onChange={HandleInputs} defaultValue={user.district} required />
 												</div>
 												<div className="col-md-6">
 													<input type="text" name="state" placeholder="State" className="form-control my-2" onChange={HandleInputs} defaultValue={user.state} required />
-												</div>
+												</div> */}
 											</div>
 											<small className="d-flex justify-content-center mt-3">
 												<Captcha buttonWork={buttonWork} />
@@ -170,4 +170,4 @@ const SignUpForm = (props) => {
 	)
 }
 
-export default SignUpForm;
+export default SignUpFormVolunteer;
