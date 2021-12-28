@@ -12,19 +12,19 @@ function CoursesTab(props) {
 				<img src={id_page} id="bg" className="img-fluid2" alt="" />
 				<Header2 logo={props.logo} hamburger={props.hamburger} navMenu={props.navMenu} setHamburger={props.setHamburger} setNav={props.setNav} />
 			</div>
-			<div class="grid-container-main">
+			<div className="grid-container-main">
 				<Link to="/id/ongoing">
-					<div class="grid-item-main">Ongoing Courses
+					<div className="grid-item-main">Ongoing Courses
 
 					</div>
 				</Link>
 				<Link to="/id/completed">
-					<div class="grid-item-main">Completed Courses
+					<div className="grid-item-main">Completed Courses
 
 					</div>
 				</Link>
 				<Link to="/id/all">
-					<div class="grid-item-main">
+					<div className="grid-item-main">
 
 						All courses
 

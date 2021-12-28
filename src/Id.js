@@ -14,6 +14,8 @@ import Instruct from './components/quiz/Instruct'
 import Grade from './components/quiz/Grade';
 import Review from './components/quiz/Review';
 import Qns from './components/quiz/Qns';
+import Assignments from './components/Assignments'
+
 
 function Id() {
 	const [hamburger, setHamburger] = useState(false)
@@ -40,10 +42,11 @@ function Id() {
 				<Route exact path="/ongoing/topics" element={<OngoingTopics logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />} />
 				<Route exact path="/ongoing/topics/topic" element={<CourseContent logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />} />
 
-				<Route path="/ongoing/topics/topic/quiz" element={<Instruct logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />}  />
-				<Route path="/ongoing/topics/topic/quiz/attempt" element={<Qns logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />}  />
-				<Route path="/ongoing/topics/topic/quiz/review" element={<Review logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />}  />
-				<Route path="/ongoing/topics/topic/quiz/grade" element={<Grade logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />}  />
+				<Route path="/ongoing/topics/topic/quiz" element={<Instruct logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />} />
+				<Route path="/ongoing/topics/topic/quiz/attempt" element={<Qns logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />} />
+				<Route path="/ongoing/topics/topic/quiz/review" element={<Review logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />} />
+				<Route path="/ongoing/topics/topic/quiz/grade" element={<Grade logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />} />
+				<Route path="/ongoing/topics/topic/assignments" element={<Assignments logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />} />
 
 			</Routes>
 
