@@ -2,9 +2,14 @@ import react from "react";
 import Header3 from "./Header3";
 import '../css/CourseContent.css';
 import { Link, Route, Routes } from "react-router-dom";
-
+import YouTube from 'react-youtube';
 
 function courseContent(props) {
+    const opts = {
+        height: '500',
+        width: '870',
+        
+      };
     return (
         <>
             <div id="contain">
@@ -13,7 +18,10 @@ function courseContent(props) {
             </div>
             <div className="below-nav-bar">
                 <div className="left-top">
-                    some content
+                    
+                    <YouTube videoId="Tn6-PIqc4UM" opts={opts} />
+
+
                 </div>
                 <div className="left-bottom">
                     <p className="name">Topic Name</p>

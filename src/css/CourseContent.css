@@ -1,7 +1,10 @@
 .below-nav-bar {
   margin-top: 104px;
 }
-
+.left-top{
+  margin-top: -500px;
+  margin-left: 2px;
+}
 .left-bottom {
   position: absolute;
   width: 870px;
@@ -49,10 +52,13 @@ hr{
 .right {
   margin-left: 900px;
   position: absolute;
-  width: 410px;
+  width: 430px;
   margin-right: 0;
-  margin-top: -550px;
+  margin-top: -520px;
   padding: 0;
+  overflow-y: scroll;
+  height: 850px;
+  
 }
 .tab1 {
   width: 410px;
