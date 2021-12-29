@@ -11,6 +11,14 @@ function AllCourses(props) {
 			.then(res => res.json())
 			.then(data => setCourses(data["courses"]))
 	}, []);
+	const requestOptions = {
+		method: "POST",
+	};
+	function enroll (id) {
+		fetch('http://localhost:3000/courses/enroll/'+id, requestOptions)
+		.then(res=>res.json())
+		.then(response => window.location = "/id/ongoing");
+	}
 	return (
 		<>
 			<div id="contain">
@@ -20,7 +28,7 @@ function AllCourses(props) {
 			<div class="grid-container-all">
 				{courses.map((course) => {
 					return (<div class="grid-item-all">{course["name"]}
-						<button className='btn btn-primary'>Enroll</button>
+						<button className='btn btn-primary' onClick={() => enroll(course["_id"])}>Enroll</button>
 					</div>
 					);
 				})}
