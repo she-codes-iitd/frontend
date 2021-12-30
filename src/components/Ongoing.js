@@ -41,13 +41,17 @@ function Ongoing(props) {
 				<img src={id_page} id="bg" className="img-fluid2" alt="" />
 				<Header2 logo={props.logo} hamburger={props.hamburger} navMenu={props.navMenu} setHamburger={props.setHamburger} setNav={props.setNav} />
 			</div>
-			<div class="grid-container-all">
+			<div class="container grid-container-all">
+			
 				{mycourses.map((course) => {
 					return (
-						<Link to="/id/ongoing/topics">
-							<div class="grid-item-all">{findName(course, courses)}
+						
+							<div class='row'><div class="col-md-4 grid-item-all">
+							<Link to="/student-dashboard/ongoing/topics">{findName(course, courses)}</Link>
+							
 							</div>
-						</Link>
+							</div>
+						
 					);
 				})}
 			</div>

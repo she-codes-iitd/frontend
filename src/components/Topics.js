@@ -6,13 +6,13 @@ function Topics() {
 
     return (
         <div className="topics">
-            <div class="row d-flex justify-content-center mt-100 mb-100">
+            
                 <div class="col-lg-6">
                     <div class="cards">
 
                         <ul class="list-style-none">
                             <li class="d-flex no-block card-body">
-                                <div> <Link to="/id/ongoing/topics/topic"> Topic 1
+                                <div> <Link to="/student-dashboard/ongoing/topics/topic"> Topic 1
                                 </Link>
                                 </div>
                             </li>
@@ -35,7 +35,7 @@ function Topics() {
                     </div>
                 </div>
             </div>
-        </div>
+        
     );
 }
 

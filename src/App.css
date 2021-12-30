@@ -44,6 +44,7 @@ label:focus,
 }
 body{
   background-color: #f3ffff;
+
 }
 .wrap {
   word-wrap: break-word;
@@ -53,6 +54,7 @@ body{
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
   z-index: -1;
 }
 
@@ -87,7 +89,7 @@ body{
 #header #navbar .line {
   border-bottom: #fff 2px solid;
   border-radius: 12px;
-  width: 30px;
+  width: 100%;
   -ms-grid-column-align: center;
   justify-self: center;
   display: none;

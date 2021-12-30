@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../css/All.css';
 import '../css/Courses.css';
 import Header2 from './Header2';
 import id_page from '../imgs/Group19.png'
@@ -12,25 +13,32 @@ function CoursesTab(props) {
 				<img src={id_page} id="bg" className="img-fluid2" alt="" />
 				<Header2 logo={props.logo} hamburger={props.hamburger} navMenu={props.navMenu} setHamburger={props.setHamburger} setNav={props.setNav} />
 			</div>
-			<div class="grid-container-main">
-				<Link to="/id/ongoing">
-					<div class="grid-item-main">Ongoing Courses
+			<div class="container grid-container-all">
 
+				<div class='row'>
+
+					<div class="col-md-4">
+						<div class="col-md-4 grid-item-all">
+							<Link to="/student-dashboard/ongoing">
+								Ongoing Courses
+							</Link>
+						</div>
 					</div>
-				</Link>
-				<Link to="/id/completed">
-					<div class="grid-item-main">Completed Courses
-
+					<div class="col-md-4">
+						<div class="col-md-4 grid-item-all">
+							<Link to="/student-dashboard/completed">
+								Completed Courses
+							</Link>
+						</div>
 					</div>
-				</Link>
-				<Link to="/id/all">
-					<div class="grid-item-main">
-
-						All courses
-
-
+					<div class="col-md-4">
+						<div class="col-md-4 grid-item-all">
+							<Link to="/student-dashboard/all">
+								All Courses
+							</Link>
+						</div>
 					</div>
-				</Link>
+				</div>
 			</div>
 		</>
 	);

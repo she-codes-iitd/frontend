@@ -17,7 +17,7 @@ function AllCourses(props) {
 	function enroll (id) {
 		fetch('http://localhost:3000/courses/enroll/'+id, requestOptions)
 		.then(res=>res.json())
-		.then(response => window.location = "/id/ongoing");
+		.then(response => window.location = "/student-dashboard/ongoing");
 	}
 	return (
 		<>
@@ -25,10 +25,11 @@ function AllCourses(props) {
 				<img src={id_page} id="bg" className="img-fluid2" alt="" />
 				<Header2 logo={props.logo} hamburger={props.hamburger} navMenu={props.navMenu} setHamburger={props.setHamburger} setNav={props.setNav} />
 			</div>
-			<div class="grid-container-all">
+			<div class="container grid-container-all">
 				{courses.map((course) => {
-					return (<div class="grid-item-all">{course["name"]}
+					return (<div class="row"><div class="col-md-4 grid-item-all">{course["name"]}
 						<button className='btn btn-primary' onClick={() => enroll(course["_id"])}>Enroll</button>
+					</div>
 					</div>
 					);
 				})}

@@ -16,7 +16,7 @@
 }
 
 .cards .card-title {
-  position: absolute;
+  
   font-weight: 600;
   margin-bottom: 10px;
 }
@@ -41,8 +41,8 @@ ul.list-style-none li a {
 }
 
 .topics{
-    position: absolute;
+    
     margin-left: 50px;
-    margin-top:50px;
+    
     
 }

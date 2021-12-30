@@ -31,8 +31,8 @@ function NavBarLoggedIn(props) {
     }
 
     return (
-        <div style={{ backgroundColor: "#16324f" }}>
-            <div id="navbar" className="container">
+        <div style={{ backgroundColor: "#16324f"}} className='container'>
+            <div id="navbar">
                 <div className="row pt-3">
 
 

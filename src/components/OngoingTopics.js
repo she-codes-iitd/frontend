@@ -10,16 +10,21 @@ import Header2 from './Header2';
 function OngoingTopics(props) {
     return (
         <>
-            <div id="contain">
+            <div id="contain" className="container">
                 <img src={id_page} id="bg" className="img-fluid2" alt="" />
                 <Header2 logo={props.logo} hamburger={props.hamburger} navMenu={props.navMenu} setHamburger={props.setHamburger} setNav={props.setNav} />
             </div>
 
-            <div className="ongoingtopic">
+            <div className="ongoingtopic container">
+                <div className="row">
+                    <div className="col-md-1">
+                        <Topics />
+                    </div>
+                    <div className="col-md-1">
 
-                <Topics />
-                <SingleTopic />
-
+                        <SingleTopic />
+                    </div>
+                </div>
             </div>
 
         </>
