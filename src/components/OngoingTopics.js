@@ -5,7 +5,7 @@ import id_page from '../imgs/Group19.png'
 import SingleTopic from "./SingleTopic";
 import '../css/ongoingtopic.css';
 import Header2 from './Header2';
-
+import '../css/SingleTopic.css';
 
 function OngoingTopics(props) {
     return (
@@ -17,12 +17,16 @@ function OngoingTopics(props) {
 
             <div className="ongoingtopic container">
                 <div className="row">
-                    <div className="col-md-1">
-                        <Topics />
+                    <div className="col-md-6">
+                        <div className="col-md-6">
+                            <Topics />
+                        </div>
                     </div>
-                    <div className="col-md-1">
+                    <div className="col-md-6">
+                        <div className="col-md-6 box">
 
-                        <SingleTopic />
+                            <SingleTopic />
+                        </div>
                     </div>
                 </div>
             </div>
