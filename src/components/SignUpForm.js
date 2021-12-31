@@ -113,7 +113,8 @@ const SignUpForm = (props) => {
 												</div>
 											</div>
 											<div className="form-group">
-												<input type="password" name="password" placeholder="Password" className="form-control my-3" onChange={HandleInputs} pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" defaultValue={user.password} title="Password must be of atleast 8 characters and contain atleast one uppercase letter, one lowercase letter and one number." required />
+												<input type="password" name="password" placeholder="Password" className="form-control mt-3" onChange={HandleInputs} pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" defaultValue={user.password} required />
+												<small><small><small className="blue-text">*Must be of atleast 8 characters containing atleast one uppercase letter, one lowercase letter and one number.</small></small></small>
 											</div>
 											<div className="form-group">
 												<input type="password" name="cpassword" placeholder="Confirm Password" className="form-control my-3" defaultValue={user.cpassword} onChange={HandleInputs} required />

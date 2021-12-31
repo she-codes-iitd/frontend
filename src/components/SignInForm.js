@@ -46,11 +46,11 @@ const SignInForm = (props) => {
 				},
 					config
 				);
-			// console.log(data);
 			setLoading(false);
+			console.log(data);
 			if (data.success === false) {
+				console.log(data);
 				throw data;
-				// console.log(data.message);
 			}
 
 			let currPage = window.location.href;
@@ -60,9 +60,8 @@ const SignInForm = (props) => {
 			// localStorage.setItem("sheCodesUserInfo", JSON.stringify(data));
 		}
 		catch (err) {
-			// console.log(err.message);
-			setError(err.message);
 			setLoading(false);
+			setError(err.response.data.message);
 		}
 		// setUser("");
 	}
