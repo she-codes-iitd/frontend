@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import Logo from './Logo';
 import SearchIcon from '@mui/icons-material/Search';
@@ -43,7 +43,7 @@ function NavBarLoggedIn(props) {
 
 						</div>
 						<div className="d-flex justify-content-center">
-							<a className="p-2 pb-1">
+							<div className="p-2 pb-1">
 								<div className="btn-group">
 									<button type="button" className="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style={{ backgroundColor: "#16324f", color: "#ffde73", borderStyle: "none" }}>
 										<CalendarTodayIcon />
@@ -54,7 +54,7 @@ function NavBarLoggedIn(props) {
 								</div>
 
 
-							</a>
+							</div>
 							<div className="line mx-auto"></div>
 						</div>
 						<div className="d-flex justify-content-center">

@@ -1,5 +1,4 @@
-import react from "react";
-import NavBarLoggedIn from "./NavBarLoggedIn";
+import React from "react";
 import Topics from "./Topics";
 import id_page from '../imgs/Group19.png'
 import SingleTopic from "./SingleTopic";
@@ -8,23 +7,23 @@ import Header2 from './Header2';
 
 
 function OngoingTopics(props) {
-    return (
-        <>
-            <div id="contain">
-                <img src={id_page} id="bg" className="img-fluid2" alt="" />
-                <Header2 logo={props.logo} hamburger={props.hamburger} navMenu={props.navMenu} setHamburger={props.setHamburger} setNav={props.setNav} />
-            </div>
+	return (
+		<>
+			<div id="contain">
+				<img src={id_page} id="bg" className="img-fluid2" alt="" />
+				<Header2 logo={props.logo} hamburger={props.hamburger} navMenu={props.navMenu} setHamburger={props.setHamburger} setNav={props.setNav} />
+			</div>
 
-            <div className="ongoingtopic">
+			<div className="ongoingtopic">
 
-                <Topics />
-                <SingleTopic />
+				<Topics />
+				<SingleTopic />
 
-            </div>
+			</div>
 
-        </>
+		</>
 
-    );
+	);
 }
 
 export default OngoingTopics;

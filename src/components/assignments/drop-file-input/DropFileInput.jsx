@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import './drop-file-input.css';
@@ -34,6 +34,19 @@ const DropFileInput = props => {
 			props.onFileChange(updatedList);
 	}
 
+	const clearAll = () => {
+		const updatedList = [];
+		setFileList(updatedList);
+		props.onFileChange(updatedList);
+	}
+
+	useEffect(() => {
+		if(props.clear === true) {
+			clearAll();
+			props.toggleClear();
+		}
+	})
+	
 	return (
 			<>
 					<div
@@ -47,7 +60,7 @@ const DropFileInput = props => {
 									<img src={uploadImg} alt="" />
 									<p>Drag & Drop your files here</p>
 							</div>
-							<input type="file" value="" onChange={onFileDrop}/>
+							<input type="file" value="" onChange={onFileDrop} />
 					</div>
 					{
 							fileList.length > 0 ? (

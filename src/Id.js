@@ -15,6 +15,7 @@ import Grade from './components/quiz/Grade';
 import Review from './components/quiz/Review';
 import Qns from './components/quiz/Qns';
 import Assignments from './components/Assignments'
+import SubmissionHistory from './components/SubmissionHistory';
 
 
 function Id() {
@@ -47,6 +48,7 @@ function Id() {
 				<Route path="/ongoing/topics/topic/quiz/review" element={<Review logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />} />
 				<Route path="/ongoing/topics/topic/quiz/grade" element={<Grade logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />} />
 				<Route path="/ongoing/topics/topic/assignments" element={<Assignments logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />} />
+				<Route path="/ongoing/topics/topic/assignments/history" element={<SubmissionHistory logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />} />
 
 			</Routes>
 
