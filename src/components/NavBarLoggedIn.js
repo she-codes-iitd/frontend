@@ -6,6 +6,7 @@ import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import PersonIcon from '@mui/icons-material/Person';
+import '../css/NavbarLoggedIn.css';
 
 function NavBarLoggedIn(props) {
     const openHamburger = () => {
@@ -31,7 +32,7 @@ function NavBarLoggedIn(props) {
     }
 
     return (
-        <div style={{ backgroundColor: "#16324f"}} className='container'>
+        <div className='container navbarlogged'>
             <div id="navbar">
                 <div className="row pt-3">
 

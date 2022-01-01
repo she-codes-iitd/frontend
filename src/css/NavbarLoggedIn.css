@@ -6,3 +6,7 @@ ul .dropdown-menu .show{
     border-style: none;
 }
 
+.navbarlogged{
+    background-color: #16324f;
+    max-width: 100%;
+}
