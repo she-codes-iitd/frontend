@@ -17,7 +17,7 @@ const SignUpFormVolunteer = (props) => {
 	}
 
 	const [user, setUser] = useState({
-		email: "", password: "", name: "", id_number: "", collegeState: "", college: "", dob: "", phone: "", district: "", state: "", cpassword: ""
+		name: "", collegeName: "", collegeState: "", collegeID: "", email: "", password: "", phone: "", dob: "", cpassword: ""
 	});
 
 	let name, value;
@@ -57,17 +57,15 @@ const SignUpFormVolunteer = (props) => {
 			setLoading(true);
 
 			const { data } = await axios
-				.post(`/student/register`, {
+				.post(`/volunteer/register`, {
+					name: user.name,
+					collegeState: user.collegeState,
+					collegeName: user.collegeName,
+					collegeID: user.collegeID,
 					email: user.email,
 					password: user.password,
-					name: user.name,
-					admission_number: user.admission_number,
-					_class: user._class,
-					school: user.school,
-					dob: user.dob,
 					phone: user.phone,
-					district: user.district,
-					state: user.state
+					dob: user.dob
 				},
 					config
 				);
@@ -122,13 +120,13 @@ const SignUpFormVolunteer = (props) => {
 										<>
 											<div className="row">
 												<div className="col-md-6">
-													<input type="text" name="college" placeholder="College Name" className="form-control my-2" onChange={HandleInputs} defaultValue={user.college} required />
+													<input type="text" name="collegeName" placeholder="College Name" className="form-control my-2" onChange={HandleInputs} defaultValue={user.collegeName} required />
 												</div>
 												<div className="col-md-6">
-													<input type="number" name="collegeState" placeholder="College State" className="form-control my-2" onChange={HandleInputs} defaultValue={user.collegeState} min="1" max="12" required />
+													<input type="text" name="collegeState" placeholder="College State" className="form-control my-2" onChange={HandleInputs} defaultValue={user.collegeState} required />
 												</div>
 												<div className="col-md-6">
-													<input type="text" name="id_number" placeholder="College ID Number" className="form-control my-2" onChange={HandleInputs} defaultValue={user.id_number} required />
+													<input type="text" name="collegeID" placeholder="College ID Number" className="form-control my-2" onChange={HandleInputs} defaultValue={user.collegeID} required />
 												</div>
 												<div className="col-md-6">
 													<input type="text" name="dob" placeholder="Date of Birth" onFocus={(e) => e.target.type = 'date'} className="form-control my-2" onChange={HandleInputs} defaultValue={user.dob} required />
