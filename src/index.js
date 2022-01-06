@@ -4,6 +4,7 @@ import App from './App';
 import SignInForm from './components/SignInForm';
 import SignUpForm from './components/SignUpForm';
 import SignUpFormVolunteer from './components/SignUpFormVolunteer';
+import SignInFormVolunteer from './components/SignInFormVolunteer';
 import reportWebVitals from './reportWebVitals';
 import Id from './Id';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -23,7 +24,7 @@ ReactDOM.render(
 ReactDOM.render(
 	<React.StrictMode>
 		<SignInForm name="Student" notname="Volunteer" />
-		<SignInForm name="Volunteer" notname="Student" />
+		<SignInFormVolunteer name="Volunteer" notname="Student" />
 		<SignUpForm name="Student" notname="Volunteer" />
 		<SignUpFormVolunteer name="Volunteer" notname="Student" />
 	</React.StrictMode>,
