@@ -10,17 +10,17 @@ function Dashboard(props) {
 				<div className="row d-flex justify-content-around align-items-center">
 					<div className="col-md-3 item">
 						<Link to="/admin/mentors">
-							<img src='https://image.freepik.com/free-vector/setup-analytics-concept-illustration_114360-1438.jpg' alt='' className='img-fluid admin-img admin-img' />
+							<img src='https://image.freepik.com/free-vector/setup-analytics-concept-illustration_114360-1438.jpg' alt='' className='img-fluid rounded' />
 						</Link>
 					</div>
 					<div className="col-md-3 item">
 						<Link to="/admin/students">
-							<img src='https://image.freepik.com/free-vector/thoughtful-woman-with-laptop-looking-big-question-mark_1150-39362.jpg' alt='' className='img-fluid admin-img' />
+							<img src='https://image.freepik.com/free-vector/thoughtful-woman-with-laptop-looking-big-question-mark_1150-39362.jpg' alt='' className='img-fluid rounded' />
 						</Link>
 					</div>
 					<div className="col-md-3 item">
 						<Link to="/admin/courses">
-							<img src='https://image.freepik.com/free-vector/student-with-laptop-studying-online-course_74855-5293.jpg' alt='' className='img-fluid admin-img' />
+							<img src='https://image.freepik.com/free-vector/student-with-laptop-studying-online-course_74855-5293.jpg' alt='' className='img-fluid rounded' />
 						</Link>
 					</div>
 				</div>
