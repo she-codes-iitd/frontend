@@ -23,6 +23,12 @@ a {
 .green-text {
 	color: #28e040;
 }
+.blue-bg {
+	background-color: var(--blue);
+}
+.light-blue-bg {
+	background-color: var(--light_blue);
+}
 
 textarea:hover,
 input:hover,
