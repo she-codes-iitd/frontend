@@ -5,6 +5,7 @@ import SignInForm from '../src/components/SignInForm';
 import SignUpForm from '../src/components/SignUpForm';
 import reportWebVitals from './reportWebVitals';
 import Id from './Id';
+import Admin from './Admin';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import Topics from './components/Topics';
 
@@ -13,6 +14,7 @@ ReactDOM.render(
 		<Routes>
 			<Route path="/" element={<App />} />
 			<Route path="/id/*" element={<Id />} />
+			<Route path="/admin/*" element={<Admin />} />
 		</Routes>
 	</Router>
 	,

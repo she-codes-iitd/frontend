@@ -40,7 +40,7 @@ const Mentors = (props) => {
 												<p className="mb-0">{parseFloat(item.size / (1024)).toFixed(2)} KB</p>
 											</div>
 										</div> */}
-								<Link to = {"/id/mentors/" + item.name}>
+								<Link to = {"/admin/mentors/" + item.name}>
 									<li className="items row mb-3">
 										<div className="col-md-3 text-center">{item.name}</div>
 										<div className="col-md-3 text-center">{item.collegeName}</div>

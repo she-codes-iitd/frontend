@@ -52,10 +52,6 @@ function Id() {
 				<Route path="/ongoing/topics/topic/quiz/grade" element={<Grade logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />} />
 				<Route path="/ongoing/topics/topic/assignments" element={<Assignments logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />} />
 				<Route path="/ongoing/topics/topic/assignments/history" element={<SubmissionHistory logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />} />
-				<Route path="/mentors/" element={<Mentors logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />} />
-				<Route path="/mentors/Mentor1" element={<MentorProfile logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />} />
-				<Route path="/students/" element={<Students logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />} />
-
 			</Routes>
 
 
