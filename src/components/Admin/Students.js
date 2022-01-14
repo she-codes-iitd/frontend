@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import SimpleNav from "./simpleNav";
-import '../css/lists.css';
+import SimpleNav from "../simpleNav";
+import './css/lists.css';
 
 const Students = (props) => {
 	const [student1, setStudent1] = useState({

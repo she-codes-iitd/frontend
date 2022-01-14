@@ -16,10 +16,6 @@ import Review from './components/quiz/Review';
 import Qns from './components/quiz/Qns';
 import Assignments from './components/Assignments'
 import SubmissionHistory from './components/SubmissionHistory';
-import Mentors from './components/Mentors';
-import Students from './components/Students';
-import MentorProfile from './components/MentorProfile';
-
 
 function Id() {
 	const [hamburger, setHamburger] = useState(false)

@@ -1,7 +1,8 @@
 import React from "react";
-import SimpleNav from "./simpleNav";
-import '../css/mentorProfile.css'
-import IMAGE from '../imgs/mentor.png'
+import SimpleNav from "../simpleNav";
+import './css/mentorProfile.css'
+import IMAGE from '../../imgs/mentor.png'
+import { Link } from "react-router-dom";
 
 const MentorProfile = (props) => {
 	return (
@@ -102,7 +103,9 @@ const MentorProfile = (props) => {
 							Student 3
 						</li>
 					</ul>
-					<button className="yellow-button ms-3">+ Add a Mentee</button>
+					<Link to="/admin/students">
+						<button className="yellow-button ms-3">+ Add a Mentee</button>
+					</Link>
 				</div>
 			</div>
 
