@@ -5,7 +5,7 @@ import Captcha from "./Captcha";
 import Loading from './Loading'
 import Verify from "./Verify";
 
-const SignUpForm = (props) => {
+const SignUpFormVolunteer = (props) => {
 	const [error, setError] = useState("");
 	const [loading, setLoading] = useState(false);
 	const [registered, setRegistered] = useState(false);
@@ -17,7 +17,7 @@ const SignUpForm = (props) => {
 	}
 
 	const [user, setUser] = useState({
-		email: "", password: "", name: "", admission_number: "", _class: "", school: "", dob: "", phone: "", district: "", state: "", cpassword: ""
+		name: "", collegeName: "", collegeState: "", collegeID: "", email: "", password: "", phone: "", dob: "", cpassword: ""
 	});
 
 	let name, value;
@@ -57,17 +57,15 @@ const SignUpForm = (props) => {
 			setLoading(true);
 
 			const { data } = await axios
-				.post(`/student/register`, {
+				.post(`/volunteer/register`, {
+					name: user.name,
+					collegeState: user.collegeState,
+					collegeName: user.collegeName,
+					collegeID: user.collegeID,
 					email: user.email,
 					password: user.password,
-					name: user.name,
-					admission_number: user.admission_number,
-					_class: user._class,
-					school: user.school,
-					dob: user.dob,
 					phone: user.phone,
-					district: user.district,
-					state: user.state
+					dob: user.dob
 				},
 					config
 				);
@@ -89,7 +87,7 @@ const SignUpForm = (props) => {
 	}
 
 	return (
-		<div className="modal fade" id={`signUpStudent`} tabIndex="-1" aria-labelledby="signInLabel" aria-hidden="true">
+		<div className="modal fade" id={`signUp${props.name}`} tabIndex="-1" aria-labelledby="signInLabel" aria-hidden="true">
 			<div className="modal-dialog modal-dialog-centered modal-lg">
 				<div className="modal-content">
 					<div className="modal-body">
@@ -113,8 +111,7 @@ const SignUpForm = (props) => {
 												</div>
 											</div>
 											<div className="form-group">
-												<input type="password" name="password" placeholder="Password" className="form-control mt-3" onChange={HandleInputs} pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" defaultValue={user.password} required />
-												<small><small><small className="blue-text">*Must be of atleast 8 characters containing atleast one uppercase letter, one lowercase letter and one number.</small></small></small>
+												<input type="password" name="password" placeholder="Password" className="form-control my-3" onChange={HandleInputs} pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" defaultValue={user.password} title="Password must be of atleast 8 characters and contain atleast one uppercase letter, one lowercase letter and one number." required />
 											</div>
 											<div className="form-group">
 												<input type="password" name="cpassword" placeholder="Confirm Password" className="form-control my-3" defaultValue={user.cpassword} onChange={HandleInputs} required />
@@ -123,23 +120,23 @@ const SignUpForm = (props) => {
 										<>
 											<div className="row">
 												<div className="col-md-6">
-													<input type="text" name="admission_number" placeholder="Admission Number" className="form-control my-2" onChange={HandleInputs} defaultValue={user.admission_number} required />
+													<input type="text" name="collegeName" placeholder="College Name" className="form-control my-2" onChange={HandleInputs} defaultValue={user.collegeName} required />
+												</div>
+												<div className="col-md-6">
+													<input type="text" name="collegeState" placeholder="College State" className="form-control my-2" onChange={HandleInputs} defaultValue={user.collegeState} required />
+												</div>
+												<div className="col-md-6">
+													<input type="text" name="collegeID" placeholder="College ID Number" className="form-control my-2" onChange={HandleInputs} defaultValue={user.collegeID} required />
 												</div>
 												<div className="col-md-6">
 													<input type="text" name="dob" placeholder="Date of Birth" onFocus={(e) => e.target.type = 'date'} className="form-control my-2" onChange={HandleInputs} defaultValue={user.dob} required />
 												</div>
-												<div className="col-md-6">
-													<input type="text" name="school" placeholder="School Name" className="form-control my-2" onChange={HandleInputs} defaultValue={user.school} required />
-												</div>
-												<div className="col-md-6">
-													<input type="number" name="_class" placeholder="Class" className="form-control my-2" onChange={HandleInputs} defaultValue={user._class} min="1" max="12" required />
-												</div>
-												<div className="col-md-6">
+												{/* <div className="col-md-6">
 													<input type="text" name="district" placeholder="District" className="me-2 form-control my-2" onChange={HandleInputs} defaultValue={user.district} required />
 												</div>
 												<div className="col-md-6">
 													<input type="text" name="state" placeholder="State" className="form-control my-2" onChange={HandleInputs} defaultValue={user.state} required />
-												</div>
+												</div> */}
 											</div>
 											<small className="d-flex justify-content-center mt-3">
 												<Captcha buttonWork={buttonWork} />
@@ -171,4 +168,4 @@ const SignUpForm = (props) => {
 	)
 }
 
-export default SignUpForm;
+export default SignUpFormVolunteer;

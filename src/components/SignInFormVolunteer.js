@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import Loading from './Loading'
 
@@ -40,7 +40,7 @@ const SignInForm = (props) => {
 			setLoading(true);
 
 			const { data } = await axios
-				.post(`/student/login`, {
+				.post(`https://she-codes-backend.herokuapp.com/volunteer/login`, {
 					email: user.email,
 					password: user.password
 				},
@@ -56,7 +56,7 @@ const SignInForm = (props) => {
 			let currPage = window.location.href;
 			currPage = currPage.split('?')[0];
 			currPage = currPage.split('#')[0];
-			window.location.href = currPage + "student-dashboard";
+			window.location.href = currPage + "id";
 			// localStorage.setItem("sheCodesUserInfo", JSON.stringify(data));
 		}
 		catch (err) {
