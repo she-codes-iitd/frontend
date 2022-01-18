@@ -1,17 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../css/Topics.css';
 
 function Topics() {
 
     return (
         <div className="topics">
-            <div class="row d-flex justify-content-center mt-100 mb-100">
+            
                 <div class="col-lg-6">
-                    <div class="card">
+                    <div class="cards">
 
                         <ul class="list-style-none">
                             <li class="d-flex no-block card-body">
-                                <div> <a href="#" class="m-b-0 font-medium p-0" data-abc="true">Topic 1</a></div>
+                                <div> <Link to="/student-dashboard/ongoing/topics/topic"> Topic 1
+                                </Link>
+                                </div>
                             </li>
                             <li class="d-flex no-block card-body border-top">
                                 <div> <a href="#" class="m-b-0 font-medium p-0" data-abc="true">Topic 2</a></div>
@@ -32,7 +35,7 @@ function Topics() {
                     </div>
                 </div>
             </div>
-        </div>
+        
     );
 }
 

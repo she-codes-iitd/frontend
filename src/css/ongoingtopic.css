@@ -1,12 +1,11 @@
 .ongoingtopic{
     height: 600px;
-    width: 1000px;
+    width: 100%;
 }
 
 /* header2 */
 #header2 {
     height: 500px;
-    position: relative;
   }
   
   #header2 #navbar a {

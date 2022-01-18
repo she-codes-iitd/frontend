@@ -23,6 +23,12 @@ a {
 .green-text {
 	color: #28e040;
 }
+.blue-bg {
+	background-color: var(--blue);
+}
+.light-blue-bg {
+	background-color: var(--light_blue);
+}
 
 textarea:hover,
 input:hover,
@@ -42,7 +48,10 @@ label:focus,
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
 }
-
+body{
+  background-color: #f3ffff;
+  margin: 0;
+}
 .wrap {
   word-wrap: break-word;
 }
@@ -51,6 +60,7 @@ label:focus,
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
   z-index: -1;
 }
 
@@ -85,7 +95,7 @@ label:focus,
 #header #navbar .line {
   border-bottom: #fff 2px solid;
   border-radius: 12px;
-  width: 30px;
+  width: 100%;
   -ms-grid-column-align: center;
   justify-self: center;
   display: none;
@@ -434,6 +444,7 @@ footer #copyright a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  
 }
 
 #small-screen-nav .container #hamburger {
@@ -496,7 +507,7 @@ footer #copyright a {
 }
 
 #small-screen-nav .container .my-navbar-logo {
-  margin: 10px 0;
+  /* margin: 10px 0; */
   margin-right: 0;
 }
 

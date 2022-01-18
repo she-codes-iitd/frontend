@@ -1,0 +1,86 @@
+.heading {
+  position: absolute;
+  width: 96%;
+  height: 104px;
+  margin-left: 21px;
+  margin-top: -410px;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.15);
+  border-radius: 23px;
+}
+
+.quiz-type {
+  width: 100px;
+  height: 41px;
+
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 41px;
+  /* identical to box height */
+
+  color: #000000;
+}
+
+.end-quiz {
+  width: 202px;
+  height: 60px;
+  margin-left: 200px;
+
+  background: #16324f;
+  border-radius: 23px;
+  color: white;
+  text-align: center;
+  padding: 17px;
+  z-index: 0;
+}
+
+.timer {
+  position: absolute;
+  width: 70px;
+  height: 37px;
+  left: 1100px;
+  margin-top: 0px;
+
+  font-family: Gilroy-SemiBold;
+  font-size: 30px;
+  line-height: 35px;
+
+  color: #000000;
+}
+.clear {
+  background: #ffffff;
+  border: 1px solid #16324f;
+  box-sizing: border-box;
+  border-radius: 16px;
+  margin-left: 900px;
+  width: 217px;
+  height: 60px;
+}
+.qn {
+  background: #ffffff;
+  box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 23px;
+  width: 92%;
+  margin-left: 50px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.modal-body-end {
+  position: absolute;
+  width: 215px;
+  height: 49px;
+  left: 240px;
+  top: 60px;
+
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 49px;
+
+  color: #000000;
+}

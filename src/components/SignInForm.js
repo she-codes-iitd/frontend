@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import axios from 'axios';
 import Loading from './Loading'
 
@@ -56,7 +56,7 @@ const SignInForm = (props) => {
 			let currPage = window.location.href;
 			currPage = currPage.split('?')[0];
 			currPage = currPage.split('#')[0];
-			window.location.href = currPage + "id";
+			window.location.href = currPage + "student-dashboard";
 			// localStorage.setItem("sheCodesUserInfo", JSON.stringify(data));
 		}
 		catch (err) {

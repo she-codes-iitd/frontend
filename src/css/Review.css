@@ -1,0 +1,35 @@
+.end-quiz-review {
+  width: 500px;
+  height: 180px;
+  margin-left: 800px;
+  background: #16324f;
+  border-radius: 23px;
+  color: white;
+  text-align: center;
+  padding: 17px;
+  padding-left: 60px;
+  padding-right: 60px;
+  z-index: 0;
+}
+
+ul{
+  width: 50%;
+  display: inline-block;
+}
+.corr {
+  background-color: #E9FFF0;
+}
+.wrong {
+  background-color: #FFE0DB;
+}
+
+.NA{
+  background-color: white;
+}
+
+.corrans{
+  background-color: #9DF2B0;
+  border-radius: 5px;
+  padding: 5px;
+}
+

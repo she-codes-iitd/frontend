@@ -1,39 +1,43 @@
 import React from 'react';
-import {Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import '../css/All.css';
 import '../css/Courses.css';
+import Header2 from './Header2';
+import id_page from '../imgs/Group19.png'
 
 function CoursesTab(props) {
 
 	return (
 		<>
-			<section class="cards-wrapper">
-				<nav>
-					<Link to="/id/ongoing">
-						<div class="container commoncard card1">
-
-							<div class="overlay">
-								<div class="text">Ongoing Courses</div>
-							</div>
+			<div id="contain">
+				<img src={id_page} id="bg" className="img-fluid2" alt="" />
+				<Header2 logo={props.logo} hamburger={props.hamburger} navMenu={props.navMenu} setHamburger={props.setHamburger} setNav={props.setNav} />
+			</div>
+			<div class="container grid-container-all">
+				<div class='row'>
+					<div class="col-md-4">
+						<div class="col-md-4 grid-item-all">
+							<Link to="/student-dashboard/ongoing">
+								Ongoing Courses
+							</Link>
 						</div>
-					</Link>
-					<Link to="/id/completed">
-						<div class="container commoncard card2">
-
-							<div class="overlay">
-								<div class="text">Completed Courses</div>
-							</div>
+					</div>
+					<div class="col-md-4">
+						<div class="col-md-4 grid-item-all">
+							<Link to="/student-dashboard/completed">
+								Completed Courses
+							</Link>
 						</div>
-					</Link>
-					<Link to="/id/all">
-						<div class="container commoncard card3">
-
-							<div class="overlay">
-								<div class="text">All Courses</div>
-							</div>
+					</div>
+					<div class="col-md-4">
+						<div class="col-md-4 grid-item-all">
+							<Link to="/student-dashboard/all">
+								All Courses
+							</Link>
 						</div>
-					</Link>
-				</nav>
-			</section>
+					</div>
+				</div>
+			</div>
 		</>
 	);
 }
