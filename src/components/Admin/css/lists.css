@@ -1,0 +1,42 @@
+.Mentors,
+.Students{
+	font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: bolder;
+}
+
+.Mentors ul,
+.Students ul{
+	list-style: none;
+	color: #043059;
+}
+
+.Mentors .items,
+.Students .items{
+	color: #000;
+	background-color: #fff;
+	border-radius: 8px;
+	padding: 10px 0;
+	box-shadow: 3px 3px 3px -3px rgba(0,0,0,0.4), 3px 3px 3px -3px rgba(0,0,0,0.4), -3px 3px 3px -3px rgba(0,0,0,0.4);
+	-webkit-box-shadow: 3px 3px 3px -3px rgba(0,0,0,0.4), 3px 3px 3px -3px rgba(0,0,0,0.4), -3px 3px 3px -3px rgba(0,0,0,0.4);
+	-moz-box-shadow: 3px 3px 3px -3px rgba(0,0,0,0.4), 3px 3px 3px -3px rgba(0,0,0,0.4), -3px 3px 3px -3px rgba(0,0,0,0.4);
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.Mentors .items:hover,
+.Students .items:hover{
+	background-color: #ffde73;
+}
+
+.Mentors .headings,
+.Students .headings{
+	font-family: "Gilroy" !important;
+	font-size: larger;
+	font-weight: 600;
+}
+
+.Mentors .mentor_heading,
+.Students .student_heading{
+	color: #043059;
+}

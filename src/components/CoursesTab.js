@@ -14,9 +14,7 @@ function CoursesTab(props) {
 				<Header2 logo={props.logo} hamburger={props.hamburger} navMenu={props.navMenu} setHamburger={props.setHamburger} setNav={props.setNav} />
 			</div>
 			<div class="container grid-container-all">
-
 				<div class='row'>
-
 					<div class="col-md-4">
 						<div class="col-md-4 grid-item-all">
 							<Link to="/student-dashboard/ongoing">

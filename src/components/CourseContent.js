@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 import Header3 from "./Header3";
 import '../css/CourseContent.css';
 import { Link, Route, Routes } from "react-router-dom";
@@ -52,11 +52,11 @@ function courseContent(props) {
                     <hr />
                     <button className="other">Assign 3</button>
 
-                    <button className="dbt">Ask A Doubt</button>
-                </div>
-            </div>
-        </>
-    );
+					<button className="dbt">Ask A Doubt</button>
+				</div>
+			</div>
+		</>
+	);
 }
 
 export default courseContent;

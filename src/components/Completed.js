@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import '../css/All.css';
 import Header2 from './Header2';
 import id_page from '../imgs/Group19.png'
