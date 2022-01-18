@@ -6,6 +6,7 @@ import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import PersonIcon from '@mui/icons-material/Person';
+import '../css/NavbarLoggedIn.css';
 
 function NavBarLoggedIn(props) {
 	const openHamburger = () => {

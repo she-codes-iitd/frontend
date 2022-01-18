@@ -4,14 +4,16 @@ import '../css/SingleTopic.css';
 
 function SingleTopic() {
 	return (
-		<div className='box'>
-			<p className='topic'>topic 1</p>
-			<p className='video'>current topic</p>
-			<p className='topic'>topic desc</p>
-			<p className='assn'>Assignment 1</p>
-			<p className='quiz'>
-				Quiz 1
-			</p>
+		<div>
+			<div className='topic'>topic 1</div>
+			<div className='video'>current topic</div>
+			
+			<div className='quizass'>
+				<span className='quiz'>
+					Quiz
+				</span>
+				<span className='assn'>Assignment</span>
+			</div>
 		</div>
 	);
 }

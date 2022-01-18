@@ -5,3 +5,8 @@ ul .dropdown-menu .show{
 .logout{
     border-style: none;
 }
+
+.navbarlogged{
+    background-color: #16324f;
+    max-width: 100%;
+}

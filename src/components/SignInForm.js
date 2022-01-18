@@ -56,12 +56,12 @@ const SignInForm = (props) => {
 			let currPage = window.location.href;
 			currPage = currPage.split('?')[0];
 			currPage = currPage.split('#')[0];
-			window.location.href = currPage + "id";
+			window.location.href = currPage + "student-dashboard";
 			// localStorage.setItem("sheCodesUserInfo", JSON.stringify(data));
 		}
 		catch (err) {
 			// console.log(err.message);
-			setError(err.message);
+			setError(err.response.data.message);
 			setLoading(false);
 		}
 		// setUser("");

@@ -4,7 +4,7 @@ import id_page from '../imgs/Group19.png'
 import SingleTopic from "./SingleTopic";
 import '../css/ongoingtopic.css';
 import Header2 from './Header2';
-
+import '../css/SingleTopic.css';
 
 function OngoingTopics(props) {
 	return (
@@ -15,14 +15,10 @@ function OngoingTopics(props) {
 			</div>
 
 			<div className="ongoingtopic">
-
 				<Topics />
 				<SingleTopic />
-
 			</div>
-
 		</>
-
 	);
 }
 
