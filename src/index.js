@@ -10,12 +10,14 @@ import Id from './Id';
 import Admin from './Admin';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import Topics from './components/Topics';
+import Mentor from './MentorId';
 
 ReactDOM.render(
 	<Router>
 		<Routes>
 			<Route path="/" element={<App />} />
 			<Route path="/id/*" element={<Id />} />
+			<Route path="/mentor/id/*" element={<Mentor/>}/>
 			<Route path="/admin/*" element={<Admin />} />
 		</Routes>
 	</Router>
