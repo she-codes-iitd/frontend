@@ -9,7 +9,7 @@ const SignUpForm = (props) => {
 	const [error, setError] = useState("");
 	const [loading, setLoading] = useState(false);
 	const [registered, setRegistered] = useState(false);
-	const [isDisabled, setDisable] = useState(false);
+	const [isDisabled, setDisable] = useState(true);
 	// const [isCaptcha, setCaptcha] = useState(false);
 
 	const buttonWork = () => {
@@ -73,23 +73,23 @@ const SignUpForm = (props) => {
 				);
 
 			setLoading(false);
+			console.log(data);
 			if (data.success === false) {
+				console.log(data);
 				throw data;
-				// console.log(data.message);
 			}
 			setRegistered(true);
 			reloadPage();
 		}
 		catch (err) {
 			setLoading(false);
-			setError(err.message);
-			console.log(err);
+			setError(err.response.data.message);
 		}
 		// setUser("");
 	}
 
 	return (
-		<div className="modal fade" id={`signUp${props.name}`} tabIndex="-1" aria-labelledby="signInLabel" aria-hidden="true">
+		<div className="modal fade" id={`signUpStudent`} tabIndex="-1" aria-labelledby="signInLabel" aria-hidden="true">
 			<div className="modal-dialog modal-dialog-centered modal-lg">
 				<div className="modal-content">
 					<div className="modal-body">
@@ -113,7 +113,8 @@ const SignUpForm = (props) => {
 												</div>
 											</div>
 											<div className="form-group">
-												<input type="password" name="password" placeholder="Password" className="form-control my-3" onChange={HandleInputs} pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" defaultValue={user.password} title="Password must be of atleast 8 characters and contain atleast one uppercase letter, one lowercase letter and one number." required />
+												<input type="password" name="password" placeholder="Password" className="form-control mt-3" onChange={HandleInputs} pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" defaultValue={user.password} required />
+												<small><small><small className="blue-text">*Must be of atleast 8 characters containing atleast one uppercase letter, one lowercase letter and one number.</small></small></small>
 											</div>
 											<div className="form-group">
 												<input type="password" name="cpassword" placeholder="Confirm Password" className="form-control my-3" defaultValue={user.cpassword} onChange={HandleInputs} required />
@@ -141,7 +142,7 @@ const SignUpForm = (props) => {
 												</div>
 											</div>
 											<small className="d-flex justify-content-center mt-3">
-												{/* <Captcha buttonWork={buttonWork} /> */}
+												<Captcha buttonWork={buttonWork} />
 											</small>
 											<small className={"d-flex justify-content-center"}>
 												<small className="red-text">{error}</small>

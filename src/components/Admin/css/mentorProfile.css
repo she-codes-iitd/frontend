@@ -1,0 +1,63 @@
+:root {
+  --dark_yellow: #f7d155;
+  --yellow: #ffde73;
+  --blue: #16324f;
+  --secondary: #2f4760;
+  --light_blue: #f3ffff;
+}
+
+.profile{
+	background-color: var(--blue);
+	color: #f3ffff;
+	font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.hour-table {
+	background-color: var(--light_blue);
+	font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.hour-table ul{
+	list-style: none;
+	color: #043059;
+}
+
+.hour-table .items{
+	color: #000;
+	background-color: #fff;
+	border-radius: 8px;
+	padding: 10px 0;
+	box-shadow: 0 5px 5px -6px #000000;
+	transition: all 0.3s ease-in-out;
+}
+
+.hour-table .headings{
+	font-weight: bold;
+}
+
+.mentees li{
+	color: #000;
+	background-color: #fff;
+	border-radius: 8px;
+	padding: 10px 20px;
+	box-shadow: 0 5px 5px -6px #000000;
+}
+
+.mentees .yellow-button{
+	padding: 5px 15px;
+	color: #393939;
+	background-color: #FFDE73;
+	border: none;
+	border-radius: 10px;
+	font-family: 'Gilroy';
+	font-weight: bold;
+	transition: all 0.3s ease-in-out;
+}
+
+.mentees .yellow-button:hover{
+	background-color: #fad353;
+}

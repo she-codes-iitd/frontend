@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import NavBarLoggedIn from './NavBarLoggedIn';
 import '../css/ongoingtopic.css'
 

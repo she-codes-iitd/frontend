@@ -1,10 +1,15 @@
-import react from "react";
+import React from "react";
 import Header3 from "./Header3";
 import '../css/CourseContent.css';
 import { Link, Route, Routes } from "react-router-dom";
-
+import YouTube from 'react-youtube';
 
 function courseContent(props) {
+    const opts = {
+        height: '500',
+        width: '870',
+        
+      };
     return (
         <>
             <div id="contain">
@@ -13,7 +18,10 @@ function courseContent(props) {
             </div>
             <div className="below-nav-bar">
                 <div className="left-top">
-                    some content
+                    
+                    <YouTube videoId="Tn6-PIqc4UM" opts={opts} />
+
+
                 </div>
                 <div className="left-bottom">
                     <p className="name">Topic Name</p>
@@ -25,7 +33,7 @@ function courseContent(props) {
                     <button className="tab1">Video 1</button>
                     <hr />
                     <button className="other">
-                        <Link to="/id/ongoing/topic/quiz">
+                        <Link to="/student-dashboard/ongoing/topics/topic/quiz">
                             Quiz 1
                         </Link>
                     </button>
@@ -44,11 +52,11 @@ function courseContent(props) {
                     <hr />
                     <button className="other">Assign 3</button>
 
-                    <button className="dbt">Ask A Doubt</button>
-                </div>
-            </div>
-        </>
-    );
+					<button className="dbt">Ask A Doubt</button>
+				</div>
+			</div>
+		</>
+	);
 }
 
 export default courseContent;

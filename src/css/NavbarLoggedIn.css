@@ -1,0 +1,12 @@
+ul .dropdown-menu .show{
+    width: 250px;
+}
+
+.logout{
+    border-style: none;
+}
+
+.navbarlogged{
+    background-color: #16324f;
+    max-width: 100%;
+}

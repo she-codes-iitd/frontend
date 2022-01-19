@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import axios from 'axios';
 import Loading from './Loading'
 
@@ -30,7 +30,7 @@ const SignInForm = (props) => {
 		try {
 			e.preventDefault();
 			console.clear();
-			console.log(user);
+			// console.log(user);
 
 			const config = {
 				headers: {
@@ -46,19 +46,22 @@ const SignInForm = (props) => {
 				},
 					config
 				);
-			// console.log(data);
 			setLoading(false);
+			console.log(data);
 			if (data.success === false) {
+				console.log(data);
 				throw data;
-				// console.log(data.message);
 			}
 
-			localStorage.setItem("sheCodesUserInfo", JSON.stringify(data));
+			let currPage = window.location.href;
+			currPage = currPage.split('?')[0];
+			currPage = currPage.split('#')[0];
+			window.location.href = currPage + "student-dashboard";
+			// localStorage.setItem("sheCodesUserInfo", JSON.stringify(data));
 		}
 		catch (err) {
-			// console.log(err.message);
-			setError(err.message);
 			setLoading(false);
+			setError(err.response.data.message);
 		}
 		// setUser("");
 	}
