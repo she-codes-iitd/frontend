@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import SimpleNav from "../simpleNav";
 import './css/lists.css';
+import { Link } from "react-router-dom";
 
 const Students = (props) => {
 	const [student1, setStudent1] = useState({
@@ -39,12 +40,14 @@ const Students = (props) => {
 												<p className="mb-0">{parseFloat(item.size / (1024)).toFixed(2)} KB</p>
 											</div>
 										</div> */}
-								<li className="items row mb-3">
-									<div className="col-md-3 text-center">{item.name}</div>
-									<div className="col-md-3 text-center">{item.schoolName}</div>
-									<div className="col-md-3 text-center">{item.courseEnrolled}</div>
-									<div className="col-md-3 text-center">{item.admissionNo}</div>
-								</li>
+								<Link to={"/admin/students/" + item.name}>
+									<li className="items row mb-3">
+										<div className="col-md-3 text-center">{item.name}</div>
+										<div className="col-md-3 text-center">{item.schoolName}</div>
+										<div className="col-md-3 text-center">{item.courseEnrolled}</div>
+										<div className="col-md-3 text-center">{item.admissionNo}</div>
+									</li>
+								</Link>
 							</>
 						))
 					}
