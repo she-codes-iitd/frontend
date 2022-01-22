@@ -103,7 +103,7 @@ const MentorProfile = (props) => {
 							Student 3
 						</li>
 					</ul>
-					<Link to="/admin/students">
+					<Link to="/admin/freshlyenrolledstudents">
 						<button className="yellow-button ms-3">+ Add a Mentee</button>
 					</Link>
 				</div>

@@ -9,6 +9,7 @@ import reportWebVitals from './reportWebVitals';
 import Id from './Id';
 import Admin from './Admin';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ForgetPasswordStudent from './components/ForgetPasswordStudent';
 // import Topics from './components/Topics';
 import Mentor from './MentorId';
 
@@ -31,6 +32,7 @@ ReactDOM.render(
 		<SignInFormVolunteer name="Volunteer" notname="Student" />
 		<SignUpForm name="Student" notname="Volunteer" />
 		<SignUpFormVolunteer name="Volunteer" notname="Student" />
+		<ForgetPasswordStudent name="Student"/>
 	</React.StrictMode>,
 	document.getElementById('modalRoot')
 );

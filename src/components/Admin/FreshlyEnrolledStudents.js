@@ -3,7 +3,7 @@ import SimpleNav from "../simpleNav";
 import './css/lists.css';
 import { Link } from "react-router-dom";
 
-const Students = (props) => {
+const FreshlyEnrolledStudents = (props) => {
 	const [student1, setStudent1] = useState({
 		name: "Student1",
 		schoolName: "IITD",
@@ -22,7 +22,7 @@ const Students = (props) => {
 		<div className="light-blue-bg">
 			<SimpleNav logo={props.logo} />
 			<div className='container Students my-3'>
-				<h1 className="student_heading display-4">Students</h1>
+				<h1 className="student_heading display-4">Freshly Enrolled Students</h1>
 				<ul className="px-4 w-100">
 					<li className="headings row mb-3">
 						<div className="col-md-3 text-center">Name</div>
@@ -40,14 +40,12 @@ const Students = (props) => {
 												<p className="mb-0">{parseFloat(item.size / (1024)).toFixed(2)} KB</p>
 											</div>
 										</div> */}
-								<Link to={"/admin/students/" + item.name}>
-									<li className="items row mb-3">
-										<div className="col-md-3 text-center">{item.name}</div>
-										<div className="col-md-3 text-center">{item.schoolName}</div>
-										<div className="col-md-3 text-center">{item.courseEnrolled}</div>
-										<div className="col-md-3 text-center">{item.admissionNo}</div>
-									</li>
-								</Link>
+								<li className="items row mb-3">
+									<div className="col-md-3 text-center">{item.name}</div>
+									<div className="col-md-3 text-center">{item.schoolName}</div>
+									<div className="col-md-3 text-center">{item.courseEnrolled}</div>
+									<div className="col-md-3 text-center">{item.admissionNo}</div>
+								</li>
 							</>
 						))
 					}
@@ -57,4 +55,4 @@ const Students = (props) => {
 	)
 }
 
-export default Students;
+export default FreshlyEnrolledStudents;

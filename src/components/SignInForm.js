@@ -86,7 +86,7 @@ const SignInForm = (props) => {
 											<input type="password" placeholder="Password" name="password" className="form-control my-3" onChange={HandleInputs} required />
 										</div>
 										<div className="text-end">
-											<small><a href="#">Forgot Password?</a></small>
+											<small><a data-bs-toggle="modal" data-bs-target={`#ForgetPasswordStudent`} className="forget_password_button">Forgot Password?</a></small>
 										</div>
 										<small className={"d-flex justify-content-center"}>
 											<small className="red-text">{error}</small>
