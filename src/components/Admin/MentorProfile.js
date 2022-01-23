@@ -14,6 +14,7 @@ const MentorProfile = (props) => {
 						<div className="col-md-6">
 							<h3>Mentor Name</h3>
 							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum provident quidem, earum beatae nemo ut laudantium placeat nihil aperiam nulla. Veniam sapiente, ipsum provident earum ipsa explicabo eius assumenda nostrum?
+							{!props.admin && <div>E-mail : hello1234@gmail.com</div>}
 						</div>
 						<div className="col-md-2 d-flex justify-content-center align-items-center">
 							<img src={IMAGE} alt="Image" className="img-fluid rounded-circle" />
@@ -103,9 +104,11 @@ const MentorProfile = (props) => {
 							Student 3
 						</li>
 					</ul>
-					<Link to="/admin/students">
-						<button className="yellow-button ms-3">+ Add a Mentee</button>
-					</Link>
+					{props.admin &&
+						<Link to="/admin/students">
+							<button className="yellow-button ms-3">+ Add a Mentee</button>
+						</Link>
+					}
 				</div>
 			</div>
 

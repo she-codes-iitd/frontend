@@ -26,7 +26,7 @@ function Admin() {
 			<Routes>
 				<Route path="/" element={<Dashboard logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />} />
 				<Route path="/mentors/" element={<Mentors logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />} />
-				<Route path="/mentors/Mentor1" element={<MentorProfile logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />} />
+				<Route path="/mentors/Mentor1" element={<MentorProfile logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} admin={true} />} />
 				<Route path="/students/" element={<Students logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />} />
 
 			</Routes>

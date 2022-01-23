@@ -61,3 +61,10 @@
 .mentees .yellow-button:hover{
 	background-color: #fad353;
 }
+
+.informationStudent{
+	background-color: var(--light_blue) !important;
+}
+.labelinformationStudent{
+	background-color: var(--yellow);
+}
