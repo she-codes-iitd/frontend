@@ -10,16 +10,25 @@ function AllCourses(props) {
 			.then(res => res.json())
 			.then(data => setCourses(data["courses"]))
 	}, []);
+	const requestOptions = {
+		method: "POST",
+	};
+	function enroll (id) {
+		fetch('http://localhost:3000/courses/enroll/'+id, requestOptions)
+		.then(res=>res.json())
+		.then(response => window.location = "/student-dashboard/ongoing");
+	}
 	return (
 		<>
 			<div id="contain">
 				<img src={id_page} id="bg" className="img-fluid2" alt="" />
 				<Header2 logo={props.logo} hamburger={props.hamburger} navMenu={props.navMenu} setHamburger={props.setHamburger} setNav={props.setNav} />
 			</div>
-			<div class="grid-container-all">
+			<div class="container grid-container-all">
 				{courses.map((course) => {
-					return (<div class="grid-item-all">{course["name"]}
-						<button className='btn btn-primary'>Enroll</button>
+					return (<div class="row"><div class="col-md-4 grid-item-all">{course["name"]}
+						<button className='btn btn-primary' onClick={() => enroll(course["_id"])}>Enroll</button>
+					</div>
 					</div>
 					);
 				})}
