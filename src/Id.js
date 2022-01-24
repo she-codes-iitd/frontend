@@ -16,6 +16,8 @@ import Review from './components/quiz/Review';
 import Qns from './components/quiz/Qns';
 import Assignments from './components/Assignments'
 import SubmissionHistory from './components/SubmissionHistory';
+import StudentProfile from './components/Admin/StudentProfile';
+import MentorProfile from './components/Admin/MentorProfile';
 
 function Id() {
 	const [hamburger, setHamburger] = useState(false)
@@ -48,13 +50,13 @@ function Id() {
 				<Route path="/ongoing/topics/topic/quiz/grade" element={<Grade logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />} />
 				<Route path="/ongoing/topics/topic/assignments" element={<Assignments logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />} />
 				<Route path="/ongoing/topics/topic/assignments/history" element={<SubmissionHistory logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />} />
+
+				<Route path="/student" element={<StudentProfile logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} admin={false} />} />
+				<Route path="/mentor" element={<MentorProfile logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} admin={false} />} />
 			</Routes>
 
-
-
-		</div>
+		</div >
 	);
 }
 
 export default Id;
-

@@ -6,6 +6,7 @@ import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import PersonIcon from '@mui/icons-material/Person';
+import { Link } from 'react-router-dom';
 import '../css/NavbarLoggedIn.css';
 
 function NavBarLoggedIn(props) {
@@ -76,9 +77,18 @@ function NavBarLoggedIn(props) {
 									<PersonIcon />
 								</button>
 								<ul className="dropdown-menu">
-									<li><a className="dropdown-item" href="/id" style={{ color: "#043059" }}>Student</a></li>
-									<li><a className="dropdown-item" href="#" style={{ color: "#043059" }}>Mentor</a></li>
-
+									<li>
+										<Link to="/id/student">
+											<a className="dropdown-item" style={{ color: "#043059" }}>Student</a>
+										</Link>
+									</li>
+									<li>
+										<Link to="/id/mentor">
+											<a className="dropdown-item" style={{ color: "#043059" }}>Mentor</a>
+										</Link>
+									</li>
+									<li>
+									</li>
 									<li><hr className="dropdown-divider" /></li>
 									<li><a className="dropdown-item" style={{ color: "#043059" }} onClick={toggleSignIn}>Logout</a></li>
 								</ul>
@@ -119,10 +129,9 @@ function NavBarLoggedIn(props) {
 					</ul>
 				</div>
 			</div>
-		</div>
+		</div >
 
 	);
 }
 
 export default NavBarLoggedIn;
-
