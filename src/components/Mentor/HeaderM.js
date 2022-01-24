@@ -8,7 +8,6 @@ function HeaderM(props) {
 		<div id = "header2">			
             <NavBarLoggedIn logo={props.logo} hamburger={props.hamburger} navMenu={props.navMenu} setHamburger={props.setHamburger} setNav={props.setNav} />
 
-
                     <div className="container" id="para_learn">
                         <h1 id="learn" className="text-white">
                             <span class="yellow-text">{props.heading}</span>
@@ -23,8 +22,6 @@ function HeaderM(props) {
                     <div className="imageholder">
                         <img src={props.imglink} alt=""/>
                     </div>
-
-            
 
         </div>
 	);

@@ -44,6 +44,7 @@ function CurrentTopic(props) {
       </div>
 
       <div class="courses-container">
+        
         <div class="course">
           <div class="course-preview">
             <h6>Course</h6>
@@ -52,38 +53,45 @@ function CurrentTopic(props) {
               View all chapters <i class="fas fa-chevron-right"></i>
             </a>
           </div>
-
           <div class="course-info">
-            <h6>Chapter 4</h6>
-            <h2>The need for JavaScript</h2>
-            <Link to="/mentor/id/ongoing/currtopic/assignment">
-            <button class="btncourse btncourse1">Add Assignment</button>
-            </Link>
-            <Link to="/mentor/id/ongoing/currtopic/quiz">
-            <button class="btncourse btncourse2">Add Quiz</button>
-            </Link>
-            <div class="three_dot">
-              <button
-                type="button"
-                class="btn dropdown-toggle"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                style={{ backgroundColor: "#ffffff", color: "#000000" }}
-              >
-                <MoreVertIcon />
-              </button>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Delete
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                   Update
-                  </a>
-                </li>
-              </ul>
+            <div className="info-top">
+              <div className="info-left">
+                <h6>Chapter 8 </h6>
+                <h2>The need for JavaScript</h2>
+              </div>
+              <div className="info-right">
+                <div class="three_dot">
+                <button
+                  type="button"
+                  class="btn dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  style={{ backgroundColor: "#ffffff", color: "#000000" }}
+                >
+                  <MoreVertIcon />
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Delete
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                    Update
+                    </a>
+                  </li>
+                </ul>
+                </div>
+              </div>
+            </div>
+            <div className="info-bottom">
+              <Link to="/mentor/id/ongoing/currtopic/assignment">
+                <button class="btncourse">Add Assignment</button>
+              </Link>
+              <Link to="/mentor/id/ongoing/currtopic/quiz">
+                <button class="btncourse">Add Quiz</button>
+              </Link>
             </div>
           </div>
         </div>
@@ -97,39 +105,48 @@ function CurrentTopic(props) {
             </a>
           </div>
           <div class="course-info">
-            <h6>Chapter 2</h6>
-            <h2>Flexboxs and Grids</h2>
-            <Link to="/mentor/id/ongoing/currtopic/assignment">
-            <button class="btncourse btncourse1">Add Assignment</button>
-            </Link>
-            <Link to="/mentor/id/ongoing/currtopic/quiz">
-            <button class="btncourse btncourse2">Add Quiz</button>
-            </Link>
-            <div class="three_dot">
-              <button
-                type="button"
-                class="btn dropdown-toggle"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                style={{ backgroundColor: "#ffffff", color: "#000000" }}
-              >
-                <MoreVertIcon />
-              </button>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Delete
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                   Update
-                  </a>
-                </li>
-              </ul>
+            <div className="info-top">
+              <div className="info-left">
+                <h6>Chapter 2</h6>
+                <h2>Flexboxs and Grids</h2>
+              </div>
+              <div className="info-right">
+                <div class="three_dot">
+                <button
+                  type="button"
+                  class="btn dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  style={{ backgroundColor: "#ffffff", color: "#000000" }}
+                >
+                  <MoreVertIcon />
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Delete
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                    Update
+                    </a>
+                  </li>
+                </ul>
+                </div>
+              </div>
+            </div>
+            <div className="info-bottom">
+              <Link to="/mentor/id/ongoing/currtopic/assignment">
+                <button class="btncourse">Add Assignment</button>
+              </Link>
+              <Link to="/mentor/id/ongoing/currtopic/quiz">
+                <button class="btncourse">Add Quiz</button>
+              </Link>
             </div>
           </div>
         </div>
+
         <div class="course">
           <div class="course-preview">
             <h6>Course</h6>
@@ -139,39 +156,99 @@ function CurrentTopic(props) {
             </a>
           </div>
           <div class="course-info">
-            <h6>Chapter 7</h6>
-            <h2>Multi Dimensional Arrays</h2>
-            <Link to="/mentor/id/ongoing/currtopic/assignment">
-            <button class="btncourse btncourse1">Add Assignment</button>
-            </Link>
-            <Link to="/mentor/id/ongoing/currtopic/quiz">
-            <button class="btncourse btncourse2">Add Quiz</button>
-            </Link>
-            <div class="three_dot">
-              <button
-                type="button"
-                class="btn dropdown-toggle"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                style={{ backgroundColor: "#ffffff", color: "#000000" }}
-              >
-                <MoreVertIcon />
-              </button>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Delete
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                   Update
-                  </a>
-                </li>
-              </ul>
+            <div className="info-top">
+              <div className="info-left">
+                <h6>Chapter 10 </h6>
+                <h2>Multi Dimensional Arrays</h2>
+              </div>
+              <div className="info-right">
+                <div class="three_dot">
+                <button
+                  type="button"
+                  class="btn dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  style={{ backgroundColor: "#ffffff", color: "#000000" }}
+                >
+                  <MoreVertIcon />
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Delete
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                    Update
+                    </a>
+                  </li>
+                </ul>
+                </div>
+              </div>
+            </div>
+            <div className="info-bottom">
+              <Link to="/mentor/id/ongoing/currtopic/assignment">
+                <button class="btncourse">Add Assignment</button>
+              </Link>
+              <Link to="/mentor/id/ongoing/currtopic/quiz">
+                <button class="btncourse">Add Quiz</button>
+              </Link>
             </div>
           </div>
         </div>
+        
+        <div class="course">
+          <div class="course-preview">
+            <h6>Course</h6>
+            <h2>General Life</h2>
+            <a href="#">
+              View all chapters <i class="fas fa-chevron-right"></i>
+            </a>
+          </div>
+          <div class="course-info">
+            <div className="info-top">
+              <div className="info-left">
+                <h6>Chapter 9 </h6>
+                <h2>The need for Studying</h2>
+              </div>
+              <div className="info-right">
+                <div class="three_dot">
+                <button
+                  type="button"
+                  class="btn dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  style={{ backgroundColor: "#ffffff", color: "#000000" }}
+                >
+                  <MoreVertIcon />
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Delete
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                    Update
+                    </a>
+                  </li>
+                </ul>
+                </div>
+              </div>
+            </div>
+            <div className="info-bottom">
+              <Link to="/mentor/id/ongoing/currtopic/assignment">
+                <button class="btncourse">Add Assignment</button>
+              </Link>
+              <Link to="/mentor/id/ongoing/currtopic/quiz">
+                <button class="btncourse">Add Quiz</button>
+              </Link>
+            </div>
+          </div>
+        </div>
+
       </div>
     </>
   );
