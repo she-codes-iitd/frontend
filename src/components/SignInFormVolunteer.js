@@ -40,7 +40,7 @@ const SignInForm = (props) => {
 			setLoading(true);
 
 			const { data } = await axios
-				.post(`https://she-codes-backend.herokuapp.com/volunteer/login`, {
+				.post(`volunteer/login`, {
 					email: user.email,
 					password: user.password
 				},
@@ -56,7 +56,7 @@ const SignInForm = (props) => {
 			let currPage = window.location.href;
 			currPage = currPage.split('?')[0];
 			currPage = currPage.split('#')[0];
-			window.location.href = currPage + "id";
+			window.location.href = currPage + "mentor/id";
 			// localStorage.setItem("sheCodesUserInfo", JSON.stringify(data));
 		}
 		catch (err) {

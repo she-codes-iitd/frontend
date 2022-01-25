@@ -1,10 +1,37 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import SimpleNav from "../simpleNav";
 import './css/mentorProfile.css'
 import IMAGE from '../../imgs/mentor.png'
 import { Link } from "react-router-dom";
+import ViewStudentProfile from "../Mentor/ViewStudentProfile";
+import { School } from "@mui/icons-material";
 
 const MentorProfile = (props) => {
+	// console.log("Finally found this")
+	const user = useRef({});
+	const [student, setStudent] = useState({});
+	const [isDisplay, setIsDisplay] = useState(false);
+	useEffect(() => {
+		const setMentorprofile = async () => {
+			const res = await fetch('/volunteer/profile');
+			const data = await res.json();
+			user.current = await data.volunteer;
+		}
+		setMentorprofile();
+	}, [])
+	const visitStudentProfile = async (id) => {
+		// const res = await fetch('/volunteer/students/' + id);
+		// const std = res.json();  //uncommet this code when fetching data from backend
+		const std = {
+			name: "asd1",
+			email: "dlsjljs@dk.com",
+			school: "qws",
+			_class: "7",
+			topics: "this is it"
+		};
+		setStudent(std);
+		setIsDisplay(!isDisplay);
+	}
 	return (
 		<div>
 			<SimpleNav logo={props.logo} />
@@ -12,7 +39,7 @@ const MentorProfile = (props) => {
 				<div className="container">
 					<div className="row d-flex justify-content-around">
 						<div className="col-md-6">
-							<h3>Mentor Name</h3>
+							<h3>{user.current.name}</h3>
 							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum provident quidem, earum beatae nemo ut laudantium placeat nihil aperiam nulla. Veniam sapiente, ipsum provident earum ipsa explicabo eius assumenda nostrum?
 						</div>
 						<div className="col-md-2 d-flex justify-content-center align-items-center">
@@ -92,7 +119,23 @@ const MentorProfile = (props) => {
 			<div className="mentees">
 				<div className="container my-3">
 					<h3>Name of Mentees</h3>
+
 					<ul className="px-4 w-100">
+						{
+							user.current.student ? user.current.students.map(student => {
+								return (
+									<div>
+										<li className="menteeNames row mb-2" onClick={visitStudentProfile(student._id)}>
+											{student.name}
+										</li>
+										{/* {isDisplay ? <ViewStudentProfile student={student} /> : null} */}
+									</div>
+								)
+							}) : <li className="menteeNames row mb-2" onClick={(e) => visitStudentProfile("random string")}>Student 0</li>
+						}
+						{
+							isDisplay ? <ViewStudentProfile student={student} /> : null
+						}
 						<li className="menteeNames row mb-2">
 							Student 1
 						</li>
