@@ -8,6 +8,7 @@ import Ongoing from './components/Mentor/OngoingM';
 import CurrentTopic from './components/Mentor/CurrentTopicM';
 import AssignmentMentor from './components/Mentor/AssignmentMentor';
 import QuizMentor from './components/Mentor/QuizMentor';
+import GradeCourse from './components/Mentor/GradeCourse';
 
 function Mentor() {
 	const [hamburger, setHamburger] = useState(false)
@@ -24,13 +25,14 @@ function Mentor() {
 
 	return (
 		<div onClick={closeHamburger}>
-        	<Routes>
+			<Routes>
 				<Route path="/" element={<Dashboard logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />} />
-				<Route path="/grading" element={<Grading logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />}  />
-                <Route path="/ongoing" element={<Ongoing logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />}  />
-				<Route path="/ongoing/currtopic" element={<CurrentTopic logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />}  />
-				<Route path="/ongoing/currtopic/assignment" element={<AssignmentMentor logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />}  />
-				<Route path="/ongoing/currtopic/quiz" element={<QuizMentor logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />}  />
+				<Route path="/grading" element={<Grading logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />} />
+				<Route path="/ongoing" element={<Ongoing logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />} />
+				<Route path="/ongoing/currtopic" element={<CurrentTopic logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />} />
+				<Route path="/ongoing/currtopic/assignment" element={<AssignmentMentor logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />} />
+				<Route path="/ongoing/currtopic/quiz" element={<QuizMentor logo={logo} hamburger={hamburger} navMenu={navMenu} setHamburger={setHamburger} setNav={setNav} />} />
+				<Route path="/grading/:id" element={<GradeCourse />} />
 			</Routes>
 		</div>
 	);

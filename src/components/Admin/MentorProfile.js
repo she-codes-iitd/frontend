@@ -7,7 +7,6 @@ import ViewStudentProfile from "../Mentor/ViewStudentProfile";
 import { School } from "@mui/icons-material";
 
 const MentorProfile = (props) => {
-	// console.log("Finally found this")
 	const user = useRef({});
 	const [student, setStudent] = useState({});
 	const [isDisplay, setIsDisplay] = useState(false);
@@ -20,15 +19,8 @@ const MentorProfile = (props) => {
 		setMentorprofile();
 	}, [])
 	const visitStudentProfile = async (id) => {
-		// const res = await fetch('/volunteer/students/' + id);
-		// const std = res.json();  //uncommet this code when fetching data from backend
-		const std = {
-			name: "asd1",
-			email: "dlsjljs@dk.com",
-			school: "qws",
-			_class: "7",
-			topics: "this is it"
-		};
+		const res = await fetch('/volunteer/students/' + id);
+		const std = await res.json();
 		setStudent(std);
 		setIsDisplay(!isDisplay);
 	}
