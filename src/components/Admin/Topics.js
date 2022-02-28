@@ -10,7 +10,7 @@ const Topic = (props) => {
 	const [topic2, setTopic2] = useState({
 		name: "Topic2"
 	});
-    const [topic3, setTopic3] = useState({
+	const [topic3, setTopic3] = useState({
 		name: "Topic3"
 	});
 	const [topics, setTopic] = useState([topic1, topic2, topic3]);
@@ -49,6 +49,18 @@ const Topic = (props) => {
 						))
 					}
 				</ul>
+				<form action="#">
+					<div className="container">
+						<div className="row">
+							<div className="col-md-8">
+								<input type="text" className="form-control" placeholder="Type the topic name you want to add" />
+							</div>
+							<div className="col-md-4">
+								<button type="submit" className="yellow_button">Add Topic</button>
+							</div>
+						</div>
+					</div>
+				</form>
 			</div>
 		</div>
 	)
