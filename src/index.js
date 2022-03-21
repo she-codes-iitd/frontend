@@ -18,7 +18,7 @@ ReactDOM.render(
 		<Routes>
 			<Route path="/" element={<App />} />
 			<Route path="/id/*" element={<Id />} />
-			<Route path="/mentor/id/*" element={<Mentor/>}/>
+			<Route path="/mentor/id/*" element={<Mentor />} />
 			<Route path="/admin/*" element={<Admin />} />
 		</Routes>
 	</Router>
@@ -32,7 +32,7 @@ ReactDOM.render(
 		<SignInFormVolunteer name="Volunteer" notname="Student" />
 		<SignUpForm name="Student" notname="Volunteer" />
 		<SignUpFormVolunteer name="Volunteer" notname="Student" />
-		<ForgetPasswordStudent name="Student"/>
+		<ForgetPasswordStudent name="Student" />
 	</React.StrictMode>,
 	document.getElementById('modalRoot')
 );

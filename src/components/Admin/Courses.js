@@ -1,9 +1,17 @@
 import React, { useState } from "react";
+import axios from "axios";
 import SimpleNav from "../simpleNav";
 import './css/lists.css';
 import { Link } from "react-router-dom";
 
 const Courses = (props) => {
+	const [error, setError] = useState("");
+	const [newCourse, setNewCourse] = useState("");
+	const HandleInputs = (e) => {
+		setNewCourse(e.target.value);
+		console.log(e.target.value);
+	}
+
 	const [course1, setCourse1] = useState({
 		name: "Course1"
 	});
@@ -14,6 +22,48 @@ const Courses = (props) => {
 		name: "Course3"
 	});
 	const [courses, setCourse] = useState([course1, course2, course3]);
+
+	const reloadPage = () => {
+		const timeLimit = 3;
+		let i = 0;
+		const timer = setInterval(function () {
+			i++;
+			if (i == timeLimit)
+				window.location.reload(false);
+		}, 1000);
+	}
+
+
+	const PostData = async (e) => {
+		try {
+			e.preventDefault();
+			console.clear();
+
+			const config = {
+				headers: {
+					"Content-type": "application/json",
+				},
+			};
+
+			const { data } = await axios
+				.post(`/courses/add_course`, {
+					courseToAdd: newCourse
+				},
+					config
+				);
+
+			if (data.success === false) {
+				console.log(data);
+				throw data;
+			}
+			reloadPage();
+		}
+		catch (err) {
+			setError(err.response.data.message);
+		}
+		// setUser("");
+	}
+
 
 	return (
 		<>
@@ -50,11 +100,11 @@ const Courses = (props) => {
 							))
 						}
 					</ul>
-					<form action="#">
+					<form onSubmit={PostData} >
 						<div className="container">
 							<div className="row">
 								<div className="col-md-8">
-									<input type="text" className="form-control" placeholder="Type the course name you want to add" />
+									<input type="text" name="newCourse" className="form-control" onChange={HandleInputs} placeholder="Type the course name you want to add" />
 								</div>
 								<div className="col-md-4">
 									<button type="submit" className="yellow_button">Add Course</button>
